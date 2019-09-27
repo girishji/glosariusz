@@ -18,3 +18,6 @@ git cherry-pick <SHA-1 of commit you just made>
 git commit -m 'Made a change to the master branch'
 git push origin master
 
+As the other answers stated, you can place .gitignore within any directory in a Git repository.
+
+

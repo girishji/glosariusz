@@ -1,0 +1,3 @@
+
+javac -classpath "./jsoup-1.12.1.jar" Parser.java
+java -cp ./jsoup-1.12.1.jar:. Parser
