@@ -1,0 +1,20 @@
+to run apache:
+
+https://discussions.apple.com/docs/DOC-13841
+
+to stop apache:
+https://apple.stackexchange.com/questions/119674/disable-apache-autostart
+
+access: http://localhost/~gpalya/glosariusz/index.html.en
+
+https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+https://stackoverflow.com/questions/31152057/sync-local-repo-with-github
+One way to get around this problem immediately would be to properly pull the master branch from GitHub, and then cherry pick the commit corresponding to the work you just did:
+git remote add origin 'url to github repo'
+git pull origin master
+git checkout master
+git cherry-pick <SHA-1 of commit you just made>
+git commit -m 'Made a change to the master branch'
+git push origin master
+
