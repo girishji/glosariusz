@@ -15,31 +15,42 @@
   <body>    
 
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-
-      <!--
-      <div class="dropdown">
-        <button class="btn btn-light btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         
-          <form class="form-inline my-2 my-lg-0">
-            <div class="input-group">
-              <input class="form-control" type="search" placeholder="Search">
-              <div class="input-group-append">
-                <div class="input-group-text"><i class="fa fa-search"></i></div>
-              </div>
-            </div>
-            </form>
-        </button>
-        <div class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here asdffffffffffffffff</a>
-        </div>
-      </div>
       
-      -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" id="mySearch" type="text" placeholder="Search" aria-label="Search"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown-menu" id="myDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </form>
+      </div>
+      <!--
+          <div class="dropdown">
+            <button class="btn btn-light btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              
+              <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                  <input class="form-control" type="search" placeholder="Search">
+                  <div class="input-group-append">
+                    <div class="input-group-text"><i class="fa fa-search"></i></div>
+                  </div>
+                </div>
+              </form>
+            </button>
+            <div class="dropdown-menu col-xs-12" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here asdffffffffffffffff</a>
+            </div>
+          </div>
+          
+          -->
       
       <!-- https://stackoverflow.com/questions/45007712/bootstrap-4-dropdown-with-search -->
-  
+<!--      
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown_coins" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
@@ -53,7 +64,7 @@
           <div id="empty" class="dropdown-header">No coins found</div>
         </div>
         </div>
-
+-->
 
         
     </nav>

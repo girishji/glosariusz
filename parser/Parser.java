@@ -35,7 +35,7 @@ class Parser {
         List<String> keys = new ArrayList<>(all.keySet());
         Collections.sort(keys);
         for (String keyStr : keys) {
-            System.out.println("  [ '" + keyStr + "'" + " ], " + "[ '" + all.get(keyStr) + "' ],");
+            System.out.println("  [ '" + keyStr + "'" + ", " + "'" + all.get(keyStr) + "' ],");
         }
         System.out.println("];");
     }
