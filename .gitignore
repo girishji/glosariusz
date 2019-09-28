@@ -1,2 +1,6 @@
 parser/*.class
 parser/bak
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*/*/*/.DS_Store
