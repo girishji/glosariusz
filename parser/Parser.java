@@ -2,6 +2,8 @@
 
 import java.io.*;
 import java.util.regex.*;
+import java.util.HashMap;
+import java.util.*; 
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
@@ -13,24 +15,33 @@ import org.jsoup.select.Elements;
 
 class Parser {
     public static void main(String[] args) {
-        System.out.println("var index = [");
+
+        HashMap<String, String> all = new HashMap<String, String>();
+        
+        System.out.println("var dictionary = [");
 
         String file = "../resources/Glosariusz_SPPW_-_Bankowosc.html";
         String linkPrefix = "Glosariusz_SPPW_-_Bankowosc/part";
-        parse(file, linkPrefix, true);
+        parse(file, linkPrefix, true, all);
 
         file = "../resources/Glosariusz_SPPW_-Rachunkowosc.html";
         linkPrefix = "Glosariusz_SPPW_-Rachunkowosc/part";
-        parse(file, linkPrefix, false);
+        parse(file, linkPrefix, false, all);
 
         file = "../resources/Glosariusz_SPPW_-_Finanse.html";
         linkPrefix = "Glosariusz_SPPW_-_Finanse/part";
-        parse(file, linkPrefix, false);
+        parse(file, linkPrefix, false, all);
 
+        List<String> keys = new ArrayList<>(all.keySet());
+        Collections.sort(keys);
+        for (String keyStr : keys) {
+            System.out.println("  [ '" + keyStr + "'" + " ], " + "[ '" + all.get(keyStr) + "' ],");
+        }
         System.out.println("];");
     }
 
-    private static String[] parse(String filename, String prefix, boolean isBanking) { // give filename with path
+    private static String[] parse(String filename, String prefix, boolean isBanking,
+                                  HashMap<String, String> out) { // give filename with path
         String[] list = new String[0];
         try {
             File input = new File(filename);
@@ -71,12 +82,17 @@ class Parser {
                             keyStr.append(joinWord(fragment));
                             //System.out.println(joinWord(fragment));
                         }
-                        System.out.println("  [ '" + keyStr.toString() + "'" + " ], " + "[ '" + url + "' ],");
+                        out.put(keyStr.toString(), url);
+                        //System.out.println("  [ '" + keyStr.toString() + "'" + " ], " + "[ '" + url + "' ],");
 
                     } else {
                         //System.out.println("UNMATCHED: " + text + " : " + url);
                         if (! text.contains("Next")) {
-                            System.out.println("  [ '" + text + "'" + " ], " + "[ '" + url + "' ],");
+                            if (text.contains("The right and obligation of a bank to keep its clients")) {
+                                text = text.replaceAll(" • The right and obligation of a bank to keep its clients .*", "");
+                            }
+                            //System.out.println("  [ '" + text + "'" + " ], " + "[ '" + url + "' ],");
+                            out.put(text, url);
                         }
                     }
                                                                 

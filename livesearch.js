@@ -2,9 +2,9 @@
 // to remove button and only have input field:
 // https://stackoverflow.com/questions/11979771/twitter-bootstrap-inline-input-with-dropdown
 
-let names = ["BTC","XRP"]
-
-let xxx = [[ 1, 'one' ],[ 2, 'two' ]]
+let dictMap = new Map(dictionary);
+let names = Array.from(dictMap.keys());
+//let names = ["BTC","XRP"]
 
 //Find the input search box
 let search = document.getElementById("searchCoin")
@@ -14,7 +14,7 @@ let items = document.getElementsByClassName("dropdown-item")
 function buildDropDown(values) {
     let contents = []
     for (let name of values) {
-    contents.push('<input type="button" class="dropdown-item" type="button" value="' + name + '"/>')
+        contents.push('<input type="button" class="dropdown-item" type="button" value="' + name + '"/>')
     }
     $('#menuItems').append(contents.join(""))
 
@@ -38,21 +38,21 @@ function filter(word) {
     let collection = []
     let hidden = 0
     for (let i = 0; i < length; i++) {
-    if (items[i].value.toLowerCase().startsWith(word)) {
-        $(items[i]).show()
-    }
-    else {
-        $(items[i]).hide()
-        hidden++
-    }
+        if (items[i].value.toLowerCase().startsWith(word)) {
+            $(items[i]).show()
+        }
+        else {
+            $(items[i]).hide()
+            hidden++
+        }
     }
 
     //If all items are hidden, show the empty view
     if (hidden === length) {
-    $('#empty').show()
+        $('#empty').show()
     }
     else {
-    $('#empty').hide()
+        $('#empty').hide()
     }
 }
 

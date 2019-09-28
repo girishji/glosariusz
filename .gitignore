@@ -1,5 +1,6 @@
 parser/*.class
 parser/bak
+dictionary.js
 .DS_Store
 */.DS_Store
 */*/.DS_Store
