@@ -1,0 +1,16 @@
+/* Show it is fixed to the top */
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+/* girish */
+.dropdown {
+    margin: 0px;
+}
+
+.dropdown-menu {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+

@@ -20,4 +20,7 @@ git push origin master
 
 As the other answers stated, you can place .gitignore within any directory in a Git repository.
 
+acrobat paid version, split into many html files based on bookmarks, split into many pdfs based on bookmarks but
+  number the files - this way they correspond to html file numbers
+
 
