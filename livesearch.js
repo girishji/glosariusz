@@ -23,48 +23,41 @@ function getFilteredItems() {
     filteredList = [];
     var filteredCount = 0;
     var itemText;
+    var index;
+    var rank = [];
     for (let i = 0, length = list.length; i < length; i++) {
         itemText = list[i].toLowerCase();
-        if (itemText.startsWith(searchTerm)) { // match occured at start of the item
-            filteredList.push(list[i]);
+        index = itemText.indexOf(searchTerm);
+        if (index === -1) {
+            rank.push(-1); // no match
+        } else if (index === 0) { // match occured at start of the item
+            rank.push(0);
             filteredCount++;
             if (filteredCount >= maxDisplayLimit) {
                 break;
             }
+        } else if (itemText.charAt(index -1) == ' ') {
+            rank.push(1);
+        } else {
+            rank.push(2);
         }
+        //console.log(rank": " + itemText);
+
     }
 
-            
-    for (let iter = 0; iter < 2; iter++) {
-
-        var index = 0;
-        if (filteredCount < maxDisplayLimit) {
-            for (let i = 0, length = list.length; i < length; i++) {
-                itemText = list[i].toLowerCase();
-                index = itemText.indexOf(searchTerm);
-                if ((index === -1) || (index === 0)) { // no match or match at beginning
-                    continue;
-                }
-                
-                if (iter == 0) {
-                    // match start of intermediate words
-                    if (itemText.charAt(index -1) == ' ') {
-                        filteredList.push(list[i]);
-                        filteredCount++;
-                        if (filteredCount >= maxDisplayLimit) {
-                            break;
-                        }
-                    }
-                } else {
-                    filteredList.push(list[i]);
-                    filteredCount++;
-                    if (filteredCount >= maxDisplayLimit) {
-                        break;
-                    }
+    filteredCount = 0;
+    for (let priority = 0; priority < 3; priority++) {
+        for (let i = 0, length = rank.length; i < length; i++) {
+            if (rank[i] === priority) {
+                filteredList.push(list[i]);
+                filteredCount++;
+                if (filteredCount >= maxDisplayLimit) {
+                    break;
                 }
             }
         }
     }
+
     console.log(filteredList);
     console.log(searchTerm);
     //generateDropdown();
