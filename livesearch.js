@@ -8,18 +8,14 @@
 //   jquery add [0], the first element in the object
 // https://stackoverflow.com/questions/4069982/document-getelementbyid-vs-jquery
 // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
-
-
-// XXX
-// escape dismisses the menu, then anymore typing won't display
-// escape dows not dismiss dropdown, but hides it
-//
+// https://getbootstrap.com/docs/3.4/javascript/
 
 var dictMap = new Map(dictionary);
 var list = Array.from(dictMap.keys());
 
 let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
+let content = document.getElementById("myContent");
 
 var filteredList = [];
 var maxDisplayLimit = 100;
@@ -37,10 +33,27 @@ $('#myDropdown').on('shown.bs.dropdown', function () {
     }
 })
 
+//If the user clicks on any item, get the text of the item and set content
+$('#myDropdownMenu').on('click', '.dropdown-item', function() {
+    let key = $(this).html();
+    if (dictMap.has(key)) {
+        url = dictMap.get(key);
+        addContent(url);
+    }
+    $('.dropdown-toggle').dropdown('toggle');
+})
+
+function addContent(url) {
+    content.innerHTML = '<iframe class="embed-responsive-item" src="' + url + '"></iframe>';
+}
+
 function generateListItem(item) {
     var anchor = document.createElement('a');
     anchor.classList.add('dropdown-item');
+    anchor.classList.add('border');
+    anchor.classList.add('border-light');
     anchor.href = "#";
+    anchor.id = "";
     anchor.innerText = item;
     return anchor;
 }
@@ -67,7 +80,6 @@ function generateDropdown() {
         }
     }
 }
-
 
 function getFilteredItems() {
     searchTerm = searchBox.value.toLowerCase();
@@ -106,75 +118,7 @@ function getFilteredItems() {
             }
         }
     }
-
     //console.log(filteredList);
     //console.log(searchTerm);
     generateDropdown();
 }
-
-
-
-
-
-
-
-
-
-
-// //Find the input search box
-// let search = document.getElementById("searchCoin")
-// 
-// //Find every item inside the dropdown
-// let items = document.getElementsByClassName("dropdown-item")
-// function buildDropDown(values) {
-//     let contents = []
-//     for (let name of values) {
-//         contents.push('<input type="button" class="dropdown-item" type="button" value="' + name + '"/>')
-//     }
-//     $('#menuItems').append(contents.join(""))
-// 
-//     //Hide the row that shows no items were found
-//     $('#empty').hide()
-// }
-// 
-// //Capture the event when user types into the search box
-// window.addEventListener('input', function () {
-//     filter(search.value.trim().toLowerCase())
-// })
-// 
-// //XXX
-// //The code above uses show() and hide() inside a loop which is why the UI is slow when you clear everything you typed in case you didn't notice. //Instead of that, use .css({display: 'none'}) and .css({display: 'block'})
-// 
-// 
-// //For every word entered by the user, check if the symbol starts with that word
-// //If it does show the symbol, else hide it
-// function filter(word) {
-//     let length = items.length
-//     let collection = []
-//     let hidden = 0
-//     for (let i = 0; i < length; i++) {
-//         if (items[i].value.toLowerCase().startsWith(word)) {
-//             $(items[i]).show()
-//         }
-//         else {
-//             $(items[i]).hide()
-//             hidden++
-//         }
-//     }
-// 
-//     //If all items are hidden, show the empty view
-//     if (hidden === length) {
-//         $('#empty').show()
-//     } else {
-//         $('#empty').hide()
-//     }
-// }
-// 
-// //If the user clicks on any item, set the title of the button as the text of the item
-// $('#menuItems').on('click', '.dropdown-item', function(){
-//     $('#dropdown_coins').text($(this)[0].value)
-//     $("#dropdown_coins").dropdown('toggle');
-// })
-// 
-// buildDropDown(names)
-

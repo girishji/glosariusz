@@ -1,0 +1,555 @@
+﻿@charset "UTF-8"; * {margin:0; padding:0; text-indent:0; }
+ .s1 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 20pt; }
+ .s2 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 30pt; }
+ .s3 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s4 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s5 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s6 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s7 { color: #1922FB; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s8 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: line-through; font-size: 18pt; }
+ .s9 { color: black; font-family:BookAntiqua-BoldItalic, serif; font-style: italic; font-weight: bold; text-decoration: line-through; font-size: 18pt; }
+ .s10 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 31pt; }
+ .s11 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .s12 { color: black; font-family:"Minion Pro Bold", serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 11pt; }
+ .s14 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s15 { color: #7C7B7B; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s16 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s17 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s18 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; }
+ .s20 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5pt; }
+ .s21 { color: #7C7B7B; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 174pt; }
+ .s22 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ .s23 { color: #7C7B7B; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; }
+ .s24 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .p, p { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; margin:0pt; }
+ .s25 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+ .s26 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; }
+ .s27 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s28 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s29 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s30 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10.5pt; }
+ .s31 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s32 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s33 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16.5pt; }
+ .s34 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 12pt; }
+ .s35 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+ .s36 { color: #7C7B7B; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24pt; vertical-align: -6pt; }
+ .s37 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10pt; }
+ .s38 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s39 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+ .s40 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s41 { color: #7C7B7B; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s42 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s43 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s44 { color: #FFF; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s45 { color: black; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; vertical-align: 1pt; }
+ .s46 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s47 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s48 { color: #7C7B7B; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24pt; }
+ .s49 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10.5pt; }
+ .s50 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24.5pt; vertical-align: 3pt; }
+ .s51 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s52 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s53 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 17.5pt; }
+ .s54 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s55 { color: #B3B2B2; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6.5pt; }
+ .s56 { color: #B3B2B2; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s57 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s58 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s59 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s60 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s61 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s62 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s63 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15.5pt; }
+ .s64 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9.5pt; }
+ .s65 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; vertical-align: 3pt; }
+ .s66 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s67 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s68 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10.5pt; }
+ .s69 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s70 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s71 { color: #7C7B7B; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s72 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -2pt; }
+ .s73 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5.5pt; }
+ .s74 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5.5pt; vertical-align: 2pt; }
+ .s75 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5.5pt; vertical-align: 2pt; }
+ .s76 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s77 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s78 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s79 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s80 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s81 { color: #9D9D9C; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s82 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15pt; }
+ .s83 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15pt; vertical-align: -1pt; }
+ .s84 { color: #7C7B7B; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s85 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12.5pt; }
+ .s86 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12.5pt; vertical-align: -4pt; }
+ .s87 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s88 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 18pt; vertical-align: -4pt; }
+ .s89 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10.5pt; }
+ .s90 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s91 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s92 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 15pt; vertical-align: -2pt; }
+ .s93 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 15pt; }
+ .s94 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; vertical-align: 3pt; }
+ .s95 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; }
+ .s96 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s97 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; vertical-align: -3pt; }
+ .s98 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; vertical-align: -2pt; }
+ .s99 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; }
+ .s100 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: -2pt; }
+ .s101 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5.5pt; }
+ .s102 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s103 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s104 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s105 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s106 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 17pt; vertical-align: -2pt; }
+ .s107 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12.5pt; }
+ .s108 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s109 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s110 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s111 { color: #1922FB; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s112 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s113 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s114 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; vertical-align: -1pt; }
+ .s115 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; vertical-align: -7pt; }
+ .s116 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8.5pt; }
+ .s117 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s118 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; vertical-align: 2pt; }
+ .s119 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s120 { color: #B3B2B2; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s121 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10.5pt; vertical-align: -4pt; }
+ .s122 { color: #929292; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s123 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10.5pt; }
+ .s124 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15pt; vertical-align: -1pt; }
+ .s125 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15.5pt; vertical-align: -2pt; }
+ .s126 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s127 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 39pt; }
+ .s128 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 16pt; }
+ .s129 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s130 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13.5pt; }
+ .s131 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: 3pt; }
+ .s132 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 21.5pt; }
+ .s134 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s135 { color: #1922FB; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s136 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s137 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s138 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; vertical-align: -2pt; }
+ .s139 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; vertical-align: -2pt; }
+ .s140 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 16pt; }
+ .s141 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s142 { color: #666; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s143 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10.5pt; vertical-align: -5pt; }
+ .s144 { color: #1922FB; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s145 { color: black; font-family:"Myriad Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s146 { color: #1922FB; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s147 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s148 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14.5pt; }
+ .s149 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5.5pt; vertical-align: 2pt; }
+ .s150 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s151 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -2pt; }
+ .s152 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s153 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s154 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s155 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s156 { color: #7C7B7B; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s157 { color: #7C7B7B; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s158 { color: #7C7B7B; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7pt; }
+ .s159 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s160 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: -6pt; }
+ .s161 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10.5pt; }
+ .s162 { color: #9D9D9C; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s163 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+ .s164 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s165 { color: black; font-family:"Minion Pro Bold", serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s166 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s167 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s168 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 5pt; }
+ .s169 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -4pt; }
+ .s170 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -3pt; }
+ .s171 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; }
+ .s172 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 16pt; vertical-align: 1pt; }
+ .s173 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10.5pt; vertical-align: 4pt; }
+ .s174 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s175 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s176 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s177 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s178 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6.5pt; }
+ .s179 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s180 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14.5pt; vertical-align: -1pt; }
+ .s181 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; }
+ .s182 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: -3pt; }
+ .s183 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: -3pt; }
+ .s184 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s186 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: line-through; font-size: 7.5pt; }
+ .s187 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ .s188 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s189 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: 4pt; }
+ .s190 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s191 { color: #B5B4B4; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s192 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: 1pt; }
+ .s193 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13pt; }
+ .s194 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s195 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s196 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; }
+ .s197 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s198 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; }
+ .s199 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s200 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; }
+ .s201 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s202 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s203 { color: #7C7B7B; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s204 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: line-through; font-size: 8.5pt; }
+ .s205 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: line-through; font-size: 8.5pt; }
+ .s206 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 15pt; }
+ .s207 { color: black; font-family:"Minion Pro Bold", serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s208 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s209 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s210 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7.5pt; }
+ .s211 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s212 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s213 { color: #1922FB; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s214 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 24pt; vertical-align: -3pt; }
+ .s215 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 23pt; vertical-align: -4pt; }
+ .s216 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; }
+ .s217 { color: #7C7B7B; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s218 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s219 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s220 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; vertical-align: -4pt; }
+ .s221 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14.5pt; vertical-align: -3pt; }
+ .s222 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14.5pt; }
+ .s223 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s224 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s225 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17pt; }
+ .s226 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 8.5pt; }
+ .s227 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15.5pt; vertical-align: -8pt; }
+ .s228 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s229 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s230 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; vertical-align: -4pt; }
+ .s231 { color: black; font-family:"Wingdings 3"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s232 { color: #9D9D9C; font-family:"Wingdings 3"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s233 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; vertical-align: 4pt; }
+ .s234 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7pt; }
+ .s235 { color: black; font-family:"Minion Pro", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s236 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s237 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s238 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s239 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 22pt; }
+ .s240 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 12.5pt; }
+ .s241 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; vertical-align: 1pt; }
+ .s242 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s243 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: line-through; font-size: 10pt; }
+ .s244 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; vertical-align: -2pt; }
+ .s245 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s246 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; vertical-align: -2pt; }
+ .s247 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s248 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; vertical-align: -2pt; }
+ .s249 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s250 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s251 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s253 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6.5pt; }
+ .s254 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15.5pt; }
+ .s255 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6.5pt; }
+ .s256 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5.5pt; }
+ .s257 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s258 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 33pt; vertical-align: -7pt; }
+ h2 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 33pt; }
+ .s260 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s261 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s262 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s263 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; vertical-align: -1pt; }
+ .s264 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15pt; vertical-align: -1pt; }
+ .s265 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; vertical-align: 1pt; }
+ .s266 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; vertical-align: -7pt; }
+ .s267 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 33pt; }
+ .s268 { color: #FFF; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 22pt; }
+ .s269 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ .s270 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s271 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s272 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s273 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s274 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 14.5pt; }
+ .s275 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 14.5pt; vertical-align: 1pt; }
+ .s276 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -3pt; }
+ .s277 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s278 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 27pt; }
+ .s279 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s280 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: -4pt; }
+ .s281 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15pt; }
+ .s282 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6pt; }
+ .s283 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s284 { color: #B3B2B2; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6pt; }
+ .s285 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s286 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6pt; }
+ .s287 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6pt; }
+ .s288 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: 4pt; }
+ .s289 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; vertical-align: 1pt; }
+ .s290 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 27pt; vertical-align: -9pt; }
+ .s291 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15pt; }
+ .s292 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s293 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s294 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s295 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; }
+ .s296 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s297 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: 3pt; }
+ .s298 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s299 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; vertical-align: 6pt; }
+ .s300 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s301 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6pt; }
+ .s302 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s303 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s304 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6pt; }
+ .s305 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6pt; }
+ .s306 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; }
+ .s307 { color: #7C7B7B; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s308 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s309 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10.5pt; }
+ .s310 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s311 { color: black; font-family:Arial-BoldItalicMT, sans-serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s312 { color: black; font-family:MyriadPro-SemiboldIt, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s313 { color: #FFF; font-family:Arial-BoldItalicMT, sans-serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s314 { color: black; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s315 { color: black; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s316 { color: black; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s317 { color: black; font-family:"Zapf Dingbats"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s318 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 10pt; }
+ .s319 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s320 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s321 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s322 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16.5pt; }
+ .s323 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s324 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s325 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5pt; }
+ .s326 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7.5pt; }
+ .s327 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: 1pt; }
+ .s328 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; vertical-align: -1pt; }
+ .s329 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 14pt; }
+ .s330 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 6.5pt; }
+ .s331 { color: #FFF; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s332 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s333 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7pt; }
+ .s334 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10.5pt; }
+ .s335 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 13.5pt; vertical-align: -3pt; }
+ .s336 { color: #929292; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s337 { color: #929292; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: -2pt; }
+ .s338 { color: #929292; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 2pt; }
+ .s339 { color: #929292; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: -3pt; }
+ .s340 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 9.5pt; }
+ .s341 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 9.5pt; }
+ .s342 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s343 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s344 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: -2pt; }
+ .s345 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; vertical-align: 2pt; }
+ .s346 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; }
+ .s347 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 2pt; }
+ .s348 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 1pt; }
+ .s349 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 3pt; }
+ .s350 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: 4pt; }
+ .s351 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: 7pt; }
+ .s352 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: -3pt; }
+ .s353 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s354 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 10pt; }
+ .s355 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s356 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 10pt; vertical-align: 1pt; }
+ h4 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 30pt; }
+ .s357 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: -3pt; }
+ .s358 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s359 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 1pt; }
+ .s360 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s361 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 33.5pt; }
+ h1 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 33.5pt; }
+ .s362 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s363 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 6.5pt; }
+ .a, a { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s365 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; vertical-align: 3pt; }
+ .s366 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s367 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s368 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s369 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; vertical-align: 3pt; }
+ .s370 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s371 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; vertical-align: -2pt; }
+ .s372 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15pt; vertical-align: -2pt; }
+ .s373 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15pt; }
+ .s374 { color: #F2F2F2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s375 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s376 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; }
+ .s377 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 13pt; vertical-align: -2pt; }
+ .s378 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 13pt; }
+ .s379 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s380 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s381 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s382 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s383 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s384 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s385 { color: #D0D0D0; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s386 { color: #646363; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s387 { color: #9D9D9C; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s388 { color: #646363; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s389 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .h3 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 31.5pt; vertical-align: -3pt; }
+ .s391 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s392 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s393 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s394 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; vertical-align: 3pt; }
+ .s395 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; vertical-align: 1pt; }
+ .s396 { color: #B3B2B2; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s397 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; vertical-align: 5pt; }
+ .s398 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5.5pt; }
+ .s399 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s400 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7.5pt; }
+ .s401 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s402 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; vertical-align: 4pt; }
+ .s403 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 16pt; }
+ .s404 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14pt; }
+ .s405 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 1pt; }
+ .s407 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s408 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10.5pt; }
+ .s409 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s410 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; }
+ .s411 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+ .s412 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: -3pt; }
+ .s413 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; vertical-align: 3pt; }
+ .s414 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s415 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 14.5pt; vertical-align: -1pt; }
+ .s416 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 13pt; }
+ .s417 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ .s418 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 3pt; }
+ .s419 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .s420 { color: black; font-family:MyriadPro-Cond, serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7pt; vertical-align: -2pt; }
+ .s421 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s422 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15.5pt; vertical-align: -2pt; }
+ .s423 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10.5pt; }
+ .s424 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 16pt; vertical-align: -1pt; }
+ .s425 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s426 { color: #FFF; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7.5pt; }
+ .s427 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 1pt; }
+ .s428 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: 1pt; }
+ .s429 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 17.5pt; vertical-align: -2pt; }
+ .s430 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9.5pt; }
+ .s431 { color: black; font-family:"Times New Roman", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 10pt; vertical-align: 5pt; }
+ .s432 { color: black; font-family:"Times New Roman", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 9.5pt; }
+ .s433 { color: #FFF; font-family:"Monotype Sorts"; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6.5pt; }
+ .s434 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: -1pt; }
+ .s435 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: -1pt; }
+ .s436 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 15.5pt; vertical-align: -1pt; }
+ .s437 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5.5pt; }
+ .s438 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s439 { color: black; font-family:"Times New Roman", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s440 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s441 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s442 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; }
+ .s443 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; vertical-align: -1pt; }
+ .s444 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5pt; }
+ .s445 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10.5pt; }
+ .s446 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; vertical-align: 1pt; }
+ .s448 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 18pt; }
+ .s450 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 25pt; vertical-align: 3pt; }
+ .s451 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 25pt; }
+ .s452 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 25pt; }
+ .s453 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s454 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s455 { color: #B3B2B2; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 7pt; vertical-align: 1pt; }
+ .s456 { color: #B3B2B2; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s457 { color: #B3B2B2; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; vertical-align: 1pt; }
+ .s458 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 14.5pt; vertical-align: -2pt; }
+ .s459 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 13pt; }
+ .s460 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s461 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; vertical-align: 2pt; }
+ .s462 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 23pt; vertical-align: -5pt; }
+ .s463 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10pt; }
+ .s464 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s465 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: 3pt; }
+ .s466 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
+ .s467 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; }
+ .s468 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: -3pt; }
+ .s469 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: 3pt; }
+ .s470 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 2.5pt; }
+ .s471 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; vertical-align: 8pt; }
+ .s472 { color: #FFF; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s473 { color: black; font-family:Webdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s474 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 4pt; vertical-align: 2pt; }
+ .s475 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 21.5pt; vertical-align: -8pt; }
+ .s476 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 21.5pt; }
+ .s477 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; }
+ .s478 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s479 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 8pt; }
+ .s480 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s481 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10pt; vertical-align: 6pt; }
+ .s482 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: -2pt; }
+ .s483 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 16pt; vertical-align: -1pt; }
+ .s484 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; vertical-align: -3pt; }
+ .s485 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 10.5pt; vertical-align: -5pt; }
+ .s486 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+ .s487 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7pt; vertical-align: -1pt; }
+ .s488 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; vertical-align: -3pt; }
+ .s489 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s490 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s491 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+ .s492 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 5.5pt; }
+ .s493 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 27.5pt; }
+ .s494 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 15.5pt; }
+ .s495 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 27.5pt; vertical-align: -7pt; }
+ .s496 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; vertical-align: -3pt; }
+ .s497 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 5.5pt; }
+ .s498 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 10pt; vertical-align: -1pt; }
+ .s499 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5.5pt; }
+ .s500 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 10pt; vertical-align: -1pt; }
+ .s501 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; vertical-align: 2pt; }
+ .s502 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3pt; }
+ .s503 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; vertical-align: -2pt; }
+ .s504 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; vertical-align: -1pt; }
+ .s505 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11.5pt; }
+ .s506 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3.5pt; vertical-align: 2pt; }
+ .s507 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 3.5pt; }
+ .s508 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17pt; vertical-align: -2pt; }
+ .s509 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 17pt; }
+ .s510 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+ .s511 { color: black; font-family:Arial-BoldItalicMT, sans-serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s512 { color: black; font-family:MyriadPro-SemiboldIt, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s513 { color: #FFF; font-family:MyriadPro-SemiboldIt, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s514 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+ .s515 { color: #FFF; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; vertical-align: -3pt; }
+ .s517 { color: #B3B2B2; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17pt; }
+ .s518 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s519 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6.5pt; vertical-align: 3pt; }
+ .s520 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9.5pt; }
+ .s521 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: line-through; font-size: 9.5pt; }
+ .s522 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 9.5pt; }
+ .s523 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 7.5pt; vertical-align: -3pt; }
+ .s524 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12.5pt; }
+ .s525 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; vertical-align: 6pt; }
+ .s526 { color: #FFF; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7.5pt; }
+ .s527 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12.5pt; }
+ .s528 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 30pt; vertical-align: -7pt; }
+ .s530 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: bold; text-decoration: underline; font-size: 12.5pt; vertical-align: -1pt; }
+ .s531 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14.5pt; vertical-align: -1pt; }
+ .s532 { color: black; font-family:MyriadPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14.5pt; }
+ .s533 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: 5pt; }
+ .s534 { color: black; font-family:"Myriad Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; vertical-align: -5pt; }
+ .s535 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: line-through; font-size: 11pt; }
+ .s536 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+ .s537 { color: black; font-family:"Times New Roman", serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s538 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s539 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 14pt; }
+ .s540 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
+ .s541 { color: black; font-family:Arial, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7.5pt; }
+ .s542 { color: #B3B2B2; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 5pt; }
+ .s543 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 18pt; }
+ .s544 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 12pt; }
+ .s545 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s546 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s547 { color: black; font-family:Cambria-BoldItalic, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 6pt; }
+ .s548 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s549 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s551 { color: black; font-family:Cambria-BoldItalic, serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s553 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; vertical-align: 1pt; }
+ .s554 { color: black; font-family:Wingdings; font-style: normal; font-weight: normal; text-decoration: none; font-size: 6pt; }
+ .s555 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8.5pt; }
+ .s556 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8.5pt; }
+ .s557 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s558 { color: black; font-family:"Minion Pro Bold", serif; font-style: italic; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s560 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s561 { color: black; font-family:MinionPro-Semibold, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 9pt; }
+ .s562 { color: black; font-family:"Minion Pro", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 12pt; }
+ .s564 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 9pt; }
+ .s567 { color: black; font-family:Arial, sans-serif; font-style: italic; font-weight: normal; text-decoration: none; font-size: 11pt; }

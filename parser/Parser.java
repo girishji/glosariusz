@@ -18,8 +18,6 @@ class Parser {
 
         HashMap<String, String> all = new HashMap<String, String>();
         
-        System.out.println("var dictionary = [");
-
         String file = "../resources/Glosariusz_SPPW_-_Bankowosc.html";
         String linkPrefix = "Glosariusz_SPPW_-_Bankowosc/part";
         parse(file, linkPrefix, true, all);
@@ -34,10 +32,22 @@ class Parser {
 
         List<String> keys = new ArrayList<>(all.keySet());
         Collections.sort(keys);
-        for (String keyStr : keys) {
-            System.out.println("  [ '" + keyStr + "'" + ", " + "'" + all.get(keyStr) + "' ],");
+
+        if (args.length > 0) {
+            // output an index into all entries
+            System.out.println("<!doctype html><html lang='en'><head></head><body><h3>Contents</h3><ul>");
+            for (String keyStr : keys) {
+                System.out.println("<li><a href='" + all.get(keyStr) + "'>" + keyStr + "</a></li>");
+            }
+            System.out.println("</ul></body></html>");
+
+        } else {
+            System.out.println("var dictionary = [");
+            for (String keyStr : keys) {
+                System.out.println("  [ '" + keyStr + "'" + ", " + "'" + all.get(keyStr) + "' ],");
+            }
+            System.out.println("];");
         }
-        System.out.println("];");
     }
 
     private static String[] parse(String filename, String prefix, boolean isBanking,
