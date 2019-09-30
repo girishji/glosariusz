@@ -2,20 +2,71 @@
 // https://chrissmith.xyz/lightning-fast-filtering-in-javascript/
 // to remove button and only have input field:
 // https://stackoverflow.com/questions/11979771/twitter-bootstrap-inline-input-with-dropdown
+//
+// jquery $('#contents') is not the same as document.getElementById('contents) -
+//   former gets a jquery object, latter gets a DOM. To get the same from
+//   jquery add [0], the first element in the object
+// https://stackoverflow.com/questions/4069982/document-getelementbyid-vs-jquery
+// https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
+
+
+// XXX
+// escape dismisses the menu, then anymore typing won't display
+// escape dows not dismiss dropdown, but hides it
+//
 
 var dictMap = new Map(dictionary);
 var list = Array.from(dictMap.keys());
 
 let searchBox = document.getElementById("mySearch");
+let dropdownMenu = document.getElementById("myDropdownMenu");
 
 var filteredList = [];
 var maxDisplayLimit = 100;
-var searchTerm = "";
 
 // Capture the event when user types into the search box
 window.addEventListener('input', function () {
     getFilteredItems();
 });
+
+// When you first click on input, it displays empty
+//  dropdown menu, hide this, by attaching a callback fn
+$('#myDropdown').on('shown.bs.dropdown', function () {
+    if (filteredList.length === 0) {
+        $('.dropdown-toggle').dropdown('toggle');
+    }
+})
+
+function generateListItem(item) {
+    var anchor = document.createElement('a');
+    anchor.classList.add('dropdown-item');
+    anchor.href = "#";
+    anchor.innerText = item;
+    return anchor;
+}
+
+function generateDropdown() {
+    var frag = document.createDocumentFragment();
+    for (var i = 0; i < filteredList.length; i++) {
+        var item = filteredList[i];
+        var aLink = generateListItem(item);
+        frag.appendChild(aLink);
+    }
+    dropdownMenu.innerHTML = '';
+    dropdownMenu.appendChild(frag);
+    if (filteredList.length === 0) {
+        // hide the dropdown, otherwise it shows up as empty box
+        if (! $('#myDropdown').find('.dropdown-menu').is(":hidden")){
+            $('.dropdown-toggle').dropdown('toggle');
+        }            
+    } else {    
+        // If they pressed ESC and closed the toggle, open it again
+        // https://stackoverflow.com/questions/22842903/how-to-open-bootstrap-dropdown-programmatically
+        if ($('#myDropdown').find('.dropdown-menu').is(":hidden")){
+            $('.dropdown-toggle').dropdown('toggle');
+        }
+    }
+}
 
 
 function getFilteredItems() {
@@ -36,13 +87,11 @@ function getFilteredItems() {
             if (filteredCount >= maxDisplayLimit) {
                 break;
             }
-        } else if (itemText.charAt(index -1) == ' ') {
+        } else if (itemText.charAt(index - 1) == ' ') {
             rank.push(1);
         } else {
             rank.push(2);
         }
-        //console.log(rank": " + itemText);
-
     }
 
     filteredCount = 0;
@@ -58,9 +107,9 @@ function getFilteredItems() {
         }
     }
 
-    console.log(filteredList);
-    console.log(searchTerm);
-    //generateDropdown();
+    //console.log(filteredList);
+    //console.log(searchTerm);
+    generateDropdown();
 }
 
 

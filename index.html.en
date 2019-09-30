@@ -15,17 +15,18 @@
   <body>    
 
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-      
+
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" id="mySearch" type="text" placeholder="Search" aria-label="Search"
-                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <div class="dropdown-menu" id="myDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </form>
+
+        <div class="dropdown" id="myDropdown">
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2 dropdown-toggle" id="mySearch" type="text" placeholder="Search" aria-label="Search"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="dropdown-menu" id="myDropdownMenu">
+            </div>
+          </form>
+        </div>
+
       </div>
       <!--
           <div class="dropdown">
