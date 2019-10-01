@@ -23,4 +23,11 @@ As the other answers stated, you can place .gitignore within any directory in a 
 acrobat paid version, split into many html files based on bookmarks, split into many pdfs based on bookmarks but
   number the files - this way they correspond to html file numbers
 
+PDF files have bookmarks and you save html by bookmark. however finance and bankowosc have nested bookmarks
+  which don't save correctly. so manually move nested ones out to high level.
+
+PDF Cos information is only available to C/C++ plugins. they have SDK
+
+There is something called links or destinations which map these bookmark equivalents to page numbers. cannot copy them.
+
 

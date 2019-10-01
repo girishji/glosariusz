@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="navbar-top-fixed.css">
     <link rel="icon" href="favicon.ico" type="image/png">
-    <title>Glosariusz SPPW Finanse Rachunkowosc Bankowosc Online Dictionary Glossary of Financial Accounting and Banking Terms</title>
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <title>SPPW Glosariusz Finanse Rachunkowość Bankowość Dictionary of Finance Accounting Banking Terms</title>
   </head>
   
   <body>    
 
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #daddfa";>  <!-- dfe0ff -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #eaedff";>  <!-- dfe0ff -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,12 +25,14 @@
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2 dropdown-toggle" id="mySearch" type="text" placeholder="Search" aria-label="Search"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="dropdown-menu" id="myDropdownMenu">
+            <div class="dropdown-menu shadow" id="myDropdownMenu">
             </div>
           </form>
         </div>
       </div>
-      <a class="navbar-brand my-2 my-sm-0" href="#">SPPW Glosariusz</a>
+      <a class="navbar-brand" href="#"><span style="font-family: 'Grenze', serif;">
+          Polish English Glossary of Finance Terms
+      </span></a>
     </nav>
 
     <main role="main" class="container">
@@ -37,7 +40,9 @@
         <div class="card-body">
           <div class="embed-responsive embed-responsive-16by9" id="myContent">
           </div>
-          <footer class="blockquote-footer"><cite title="Source Title">Source: SPPW Glosariusz (<a href="#">PDF</a>)</cite></footer>
+          <footer class="blockquote-footer">
+            <cite title="Source Title">Source: SPPW Glosariusz (<a href="#" id="myPDFLink">PDF</a>)</cite>
+            <!-- <a class="float-right text-muted font-italic" href="#">Girish</a></footer> -->
         </div>
       </div>
     </main>

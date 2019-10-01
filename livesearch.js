@@ -45,6 +45,21 @@ $('#myDropdownMenu').on('click', '.dropdown-item', function() {
 
 function addContent(url) {
     content.innerHTML = '<iframe class="embed-responsive-item" src="' + url + '"></iframe>';
+
+    var words = url.split('/');
+    if (words.length === 2) {
+        var prefix = words[1].substring(4, words[1].length); // remove 'part'
+        var fileNum = parseInt(prefix, 10);
+        console.log(fileNum);
+        var pdfNum = fileNum;
+        if (words[0] === "Glosariusz_SPPW_-_Finanse") {
+        } else if (words[0] === "Glosariusz_SPPW_-_Bankowosc") {
+
+        } else {
+        }
+            
+        var pdf = words[0] + "/" + words[0] + "_Part" + pdfNum + ".pdf";
+        $('#myPDFLink').attr("href", pdf)
 }
 
 function generateListItem(item) {
