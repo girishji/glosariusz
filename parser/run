@@ -1,9 +1,0 @@
-
-javac -classpath "./jsoup-1.12.1.jar" Parser.java
-java -cp ./jsoup-1.12.1.jar:. Parser > ../dictionary.js
-
-java -cp ./jsoup-1.12.1.jar:. Parser bar > foo 
-cp foo ../Glosariusz_SPPW_-Rachunkowosc.html
-cp foo ../Glosariusz_SPPW_-_Bankowosc.html
-cp foo ../Glosariusz_SPPW_-_Finanse.html
-rm -f foo

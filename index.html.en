@@ -16,6 +16,8 @@
   
   <body>    
 
+    <!-- glosariusz-pojec-z-dziedziny-rachunkowosci-finansow-bankowosci -->
+    
     <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #eaedff";>  <!-- dfe0ff -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

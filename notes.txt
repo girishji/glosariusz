@@ -24,7 +24,8 @@ acrobat paid version, split into many html files based on bookmarks, split into 
   number the files - this way they correspond to html file numbers
 
 PDF files have bookmarks and you save html by bookmark. however finance and bankowosc have nested bookmarks
-  which don't save correctly. so manually move nested ones out to high level.
+  which don't save correctly into separate files during html conversion, and during pdf split all nested ones
+  get put into one file -- so the file numbers of pdf and html don't match. so manually move nested ones out to high level.
 
 PDF Cos information is only available to C/C++ plugins. they have SDK
 
