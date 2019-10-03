@@ -1,3 +1,13 @@
+
+Removed a few paragraphs from all xml files in resources/xml as it contained author data and some malformed data
+
+--
+
+use these tips to install lxml
+https://stackoverflow.com/questions/27008222/importerror-no-module-named-lxml-even-though-lxml-is-installed
+
+--
+
 to run apache:
 
 https://discussions.apple.com/docs/DOC-13841
