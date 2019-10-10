@@ -21,15 +21,11 @@ def bookmarks(tree):
     tokens = []
     # Use xpath
     bookmarks = tree.findall("//bookmark[@title]")
-
-    banking = 0
-    if prefix(filename) in 'bankowosc':
-        banking = 1
         
     for item in bookmarks:
         bm = item.get('title')
 
-        if banking:
+        if prefix(filename) == 'bankowosc':
             partition = bm.partition(u'–')
             if partition[1]:
                 tokens.append(partition[0].rstrip())
@@ -51,65 +47,66 @@ def bookmarks(tree):
 
     return tokens
 
-def bookmark_element(tree, token):
+def bookmark_element(elements, token):
     """Find P/Link element in the doc corresponding to bookmark (token)"""
-    p_with_links = tree.findall('//P[Link]')
-    h3_with_links = tree.findall('//H3[Link]')
-    h4_with_links = tree.findall('//H4[Link]')
-    p_without_links = tree.findall('//P')
-    
-    #print token
-    
-    for pl in itertools.chain(p_with_links, h3_with_links, h4_with_links, p_without_links):
+    for pl in elements:
         text = ''.join(pl.itertext())
         if contains(text, token):
             return pl
     else: # for loop not finding next P/Link
-        print('Error: cannot find next Element for', token)
+        print('Error: cannot find Element for', token)
         return None
         #sys.exit()
     
-
+def bookmark_elements(tree):
+    """Return a generator over all Elements that contain the tokens with description."""
+    return tree.findall('//P[Link]') + tree.findall('//H3[Link]') + tree.findall('//H4[Link]') \
+        + tree.findall('//P')
+    
 def fragments(filename, dest = 'fragments'): 
     """Create html file with content for each search key."""
     tree = etree.parse(filename)
     tokens = bookmarks(tree)
-
+    elements = bookmark_elements(tree)
+    
+    # Some tokens don't have descriptions, remove them
     removables = []
     for i, token in enumerate(tokens):
-        print '==================================================='
-        last_token = 0
-        if i == (len(tokens) - 1): # last token
-            last_token = 1
-        else:
-            plink = bookmark_element(tree, token)
-            if plink is None:
-                removables.append(token)
-            else:
-                format_element(plink)
-                # get siblings after this token
-                siblings = plink.xpath('./following-sibling::*')
-                for sibling in siblings:
-                    if not last_token:
-                        next_token = tokens[i + 1]
-                        if same_as(sibling, next_token):
-                            break; # done for this token
-
-                    format_element(sibling)
-    # removing it here, not during iteration
+        plink = bookmark_element(elements, token)
+        if plink is None:
+            removables.append(token)
+    # removing here, and not during iteration
     for rem in removables:
         tokens.remove(rem)
-        
+
+    for i, token in enumerate(tokens):
+        #print '==================================================='
+        plink = bookmark_element(elements, token)
+        #format_element(plink)
+        # get siblings after this token
+        siblings = plink.xpath('./following-sibling::*')
+        next_token = None
+        if i != (len(tokens) - 1): # not the last token
+            next_token = tokens[i + 1]
+            found = False
+            for sibling in siblings:
+                if equal(sibling, bookmark_element(elements, next_token)):
+                    found = True
+                    break; # done for this token
+                #format_element(sibling)
+            if not found:
+                print(token, "next token", next_token, " not found")
+                for sibling in siblings:
+                    print(sibling.text)
+
     print 'DONE', len(tokens)
 
-def same_as(elem, token):
+def equal(elem, plink):
     """Return true if token is the beginning of the element text """
-    regexs = [ '../P/Link', '../H3/Link', '../H4/Link', '../P' ] 
-    for reg in regexs:
-        if len(elem.xpath(reg)) == 1:
-            text = ''.join(elem.itertext())            
-            if contains(text, token):
-                return 1
+    elem_text = ''.join(elem.itertext())
+    plink_text = ''.join(elem.itertext())
+    if (plink_text == elem_text):
+        return 1
     return 0
     
 
@@ -118,14 +115,32 @@ def format_element(elem):
 
 def contains(str1, str2):
     """If str1 contains str2"""
+    
+    # compare first two elements separated by • for this file
+    str2_n = ""
+    if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
+        partition = str2.rpartition(u'•')
+        if partition[1]:
+            str2_n = partition[0].rstrip()
+            str2_n = str2_n.replace(u'\xa0', u' ')
+            str2_n = re.sub('[\s -]', '', str2_n)
+            
+    # remove non breaking space characters with simple space
+    str1 = str1.replace(u'\xa0', u' ')
+    str2 = str2.replace(u'\xa0', u' ')
+    str2 = str2.replace(u'\u202f', u' ')
+
     # remove - sign and whitespaces
     str1c = re.sub('[\s -]', '', str1) 
     str2c = re.sub('[\s -]', '', str2)
     #if str2c in str1c.encode('utf-8'):
+        
     if str2c in str1c:
         return 1 # true
+    if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc') and str2_n in str1c:
+        return 1
     return 0
-    
+
 def prefix(filename):
     if 'Bankowosc' in filename:
         return 'bankowosc'
@@ -137,7 +152,10 @@ def prefix(filename):
     sys.exit()
 
 
-filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
+#filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
+#filename = '../resources/xml/Glosariusz_SPPW_-_Finanse_modified.xml'
+filename = '../resources/xml/Glosariusz_SPPW_-Rachunkowosc_modified.xml'
+
 fragments(filename)
 
 

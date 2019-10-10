@@ -1,5 +1,6 @@
 
-Removed a few paragraphs from all xml files in resources/xml as it contained author data and some malformed data
+* Removed a few paragraphs from all xml files in resources/xml as it contained author data and some malformed data
+* Removed one </Sect> and <Sect> and two </Div> <Div> to merge the sections so siblings can be found in xpath(following-sibing)
 
 --
 

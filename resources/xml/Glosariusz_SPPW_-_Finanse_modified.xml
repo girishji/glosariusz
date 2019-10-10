@@ -338,7 +338,7 @@
 <destination structID="LinkTarget_27671"/>
 <bookmark title="Byki zarabiają pieniądze, niedźwiedzie zarabiają pieniądze, ale wieprze idą na rzeź (powiedzenie) • Bulls Make Money and Bears Make Money, But Hogs Get Slaughtered (adage) • cierpliwi, optymistyczni, długoterminowi inwestorzy odnoszą sukces na giełdzie po">
 <destination structID="LinkTarget_27671"/>
-<bookmark title="Całkowita stopa zwrotu dla akcjonariuszy • Total Shareholder Returns • TSR • Stopa zwrotu mierzona na podstawie rocznego zysku, który inwestor osiąga zarówno z otrzymanych dywidend jak i z zysku kapitałowego w wyniku wzrostu wartości rynkowej akcji w obro">
+<bookmark title="Całkowita stopa zwrotu dla akcjonariuszy • Total Shareholder Returns • TSR - Stopa zwrotu mierzona na podstawie rocznego zysku, który inwestor osiąga zarówno z otrzymanych dywidend jak i z zysku kapitałowego w wyniku wzrostu wartości rynkowej akcji w obro">
 <destination structID="LinkTarget_27672"/>
 </bookmark>
 <bookmark title="Całkowita wartość przedsiębiorstwa • Total Enterprise Value • TEV • Wartość wszystkich zasobów przedsiębiorstwa powiększona o nadwyżkę gotówki. To pożyteczna miara do obliczenia całkowitych zasobów potrzebnych dla przejęcia firmy w takich przypadkach, gdy">
@@ -424,7 +424,7 @@
 <bookmark title="Częściowa sprzedaż udziałów mniejszościowych • Equity Carve-Out • Sprzedaż przez spółkę macierzystą trzeciej stronie, inwestorowi części (zwykle udziałów mniejszościowych) jednostki zależnej. Takie częściowe zbycie aktywów może służyć zdobyciu funduszy dl">
 <destination structID="LinkTarget_27685"/>
 </bookmark>
-<bookmark title="Członek rady nadzorczej nie zatrudniony w przedsiębiorstwie • Non-‑executive Director • Taka osoba w radzie nadzorczej jest bardziej niezależna od nacisków zarządu i może lepiej sprawować nad nim nadzór. Stanowi to ważną strategię w walce przeciwko kapita">
+<bookmark title="Członek rady nadzorczej nie zatrudniony w przedsiębiorstwie • Non-executive Director • Taka osoba w radzie nadzorczej jest bardziej niezależna od nacisków zarządu i może lepiej sprawować nad nim nadzór. Stanowi to ważną strategię w walce przeciwko kapita">
 <destination structID="LinkTarget_27685"/>
 </bookmark>
 <bookmark title="Członkostwo w giełdzie • Seat (Stock Exchange) • Tradycyjne odniesienie do uczestnictwa w giełdzie papierów wartościowych lub towarowej, pochodzące prawdopodobnie od koncepcji posiadania „miejsca przy stole”. W związku z tym, że większość giełd nie przyjm">
@@ -2376,7 +2376,7 @@ dochodowych, emitenci obligacji ">
 </bookmark>
 <bookmark title="Skandal na Wall Street • Wall Street Scandal • Przykre niespodzianki w postaci oszustw lub nieprawidłowości księgowych, które okresowo wstrząsają giełdą amerykańską. W następstwie skandalu związanego ze spółką Enron i bańką internetową z lat 1999–2001 rok">
 <destination structID="LinkTarget_28022"/>
-<bookmark title="Skarbowe papiery zabezpieczone przed inflacją • Treasury Inflation-‑Protected • TIP Security • Instrument finansowy oferowany przez Departament Skarbu USA stanowiący narzędzie do ochrony aktywów i zabezpieczenie inwestorów przed inflacją. Wartość nominaln">
+<bookmark title="Skarbowe papiery zabezpieczone przed inflacją • Treasury Inflation-Protected • TIP Security • Instrument finansowy oferowany przez Departament Skarbu USA stanowiący narzędzie do ochrony aktywów i zabezpieczenie inwestorów przed inflacją. Wartość nominaln">
 <destination structID="LinkTarget_28023"/>
 </bookmark>
 </bookmark>
@@ -7494,9 +7494,7 @@ Agencje informacyjne, finansowe mld USD Thomson Financial Bloomberg Dow Jones Re
 <P id="LinkTarget_27635">Akcje oznaczone • 
 <Link>Tracking Stock </Link>
 • Seria akcji jednostki dominującej pozwalająca na wyodrębnienie zysku osiągniętego przez określony oddział lub jednostkę zależną (w języku angielskim, prócz nazwy podanej w tytule hasła, akcje takie określa się również jako „letter stock” lub „targeted stock”). Akcje oznaczone mogą zostać rozdzielone między akcjonariuszy jednostki dominującej, albo wyemitowane w formie pierwotnej oferty publicznej. Jednostce dominującej przysługuje prawo własności, czerpania pożytków i kontroli nad działalnością jednostki zależnej. Tym niemniej, zyski obu spółek wykazywane są odrębnie i można je przypisać konkretnym akcjom oznaczonym. W ten sposób, z prawnego punktu widzenia, akcjonariusze mają udziały w spółce matce, lecz ich uprawnienie do dywidendy zależne jest od wyników określonej działalności. To z kolei pozwala na dokonanie odrębnej wyceny obu serii akcji na rynku giełdowym, według odnośnych wskaźników cena/zysk. Emisja akcji oznaczonych często jest wstępnym krokiem do zbycia jednostki zależnej lub stworzenia „waluty nabywczej” w celu dokonania określonego zakupu. Jednocześnie, sytuacja taka pozwala jednostce dominującej i zależnej cieszyć się wspólnymi korzyściami, jak np. efekt synergii operacyjnej, straty podatkowe, czy ocena kredytowa. Akcje oznaczone to wynalazek spółki General Motors (USA), po inwestycji w spółkę Electronic Data Systems w 1984 roku oraz spółkę Hughes Electronics, dwie spółki o zdecydowanie innych cechach w porównaniu z branżą samochodową. Ostatecznie oba podmioty zostały zbyte po tym, jak spółka GM powróciła do swojej działalności podstawowej. Koncepcja akcji oznaczonych stała się modna u szczytu notowań giełdowych w 1999 i 2000 roku, ponieważ wiele spółek poszukiwało sposobów na uzyskanie wysokiej wyceny z tytułu działalności związanej z internetem o wysokiej relacji ceny do zysku. Od tego czasu popularność tego rozwiązania zaczęła spadać. Patrz również restrukturyzacja przedsiębiorstwa i częściowa sprzedaż udziałów mniejszościowych. </P>
-</Sect>
 
-<Sect>
 <H4>Akcje uprzywilejowane • 
 <Link>Preferred Stock </Link>
 (USA)• 
@@ -8809,10 +8807,12 @@ Rynkowe spredy cenowe Pozycja Sprzedaż Średnia Kupno Długa 98 99 100 Krótka 
 <Sect>
 <H3>Chicagowska Giełda Towarowa • CME • 
 <Link>Chicago Mercantile Exchange </Link>
-</H3>
 
-<P>• 
+
+•
 <Link>CME </Link>
+</H3>
+<P>
 • CME (zwana często „Chicago Merc” lub „the Merc”) to amerykańska giełda finansowych i towarowych instrumentów pochodnych z siedzibą w Chicago, w stanie Illinois. Na CME notowanych jest kilka typów instrumentów finansowych: kontrakty na stopę procentową, akcje, waluty i towary. Można na niej również handlować instrumentami alternatywnymi, takimi jak: instrumenty pochodne pogodowe i nieruchomości. Założono ją w roku 1898 ze względu na jej bliską odległość do rolniczego centrum Środkowego Zachodu Stanów Zjednoczonych. Od tamtej pory doszło do połączenia się jej z innymi giełdami, takimi jak Chicago Board of Trade oraz New York Mercantile Exchange (Nowojorska Giełda Towarowa), co uczyniło z niej największą z giełd kontraktów terminowych na świecie pod względem otwartych pozycji, opcji i kontraktów terminowych (liczba kontraktów w obrocie). </P>
 
 <P id="LinkTarget_27678">Choćby się waliło i paliło • Cokolwiek by się nie działo (żargon) • 
@@ -14770,16 +14770,16 @@ Zadanie numer 1 </Figure>
 <P id="LinkTarget_27821">Koszt wpływu na rynek • 
 <Link>Market Impact Cost </Link>
 • Duże transakcje kupna lub sprzedaży, które napędzają rynek i w ten sposób narzucają ceny uczestnikom transakcji. Przykładowo, gdyby duża instytucja finansowa miała kupić pokaźną ilość obcej waluty na rynku o niewielkiej liczbie transakcji, cena waluty poszłaby w górę wskutek zmian w równowadze podaży i popytu. Nabywca musiałby zapłacić więcej (koszt wpływu rynkowego) w porównaniu z poprzednią ceną równowagi rynkowej. Można w takim wypadku chwycić się metody polegającej na rozbiciu dużej transakcji na kilka mniejszych, ale wówczas rosną koszty transakcyjne. </P>
-</Sect>
 
-<Sect>
 <H3>Koszty emisji • Koszty wprowadzenia spółki na giełdę • 
 <Link>Issuance Costs </Link>
-</H3>
 
-<P>• 
+
+•
 <Link>Flotation Costs </Link>
-• Jednorazowy wydatek w postaci kosztu transakcyjnego (w przeciwieństwie do powtarzającego się, okresowego kosztu kapitału), który umożliwia zebranie nowego kapitału. Kwota różni się w zależności od rodzaju kapitału (kapitał własny wobec zadłużenia), emitenta oraz rodzaju transakcji (np. pierwotne oferty publiczne są najdroższe). W przypadku własnego kapitału dochodzą koszty bieżące emisji, takie jak opłaty rejestracyjne, prospekt emisyjny, opłaty za biegłych rewidentów, prawników oraz usługi banków inwestycyjnych (doradztwo lub gwarancja). Jednocześnie obniżanie ceny emisyjnej (zamiast obrotu według ceny rynkowej) skutkuje dla dotychczasowych akcjonariuszy utratą korzyści. W przypadku emisji papierów dłużnych koszty emisji mogą obejmować uzyskanie oceny ratingowej oraz/lub opłaty należne kredytodawcom. Koszty emisji są zazwyczaj stałe, wobec tego procent zależy od zebranej kwoty. Ponieważ podniesienie kapitału jest najdroższe, zazwyczaj istnieje jakieś minimum, poniżej którego operacja robi się nieopłacalna. W związku z tym dla małych i średnich przedsiębiorstw dokapitalizowanie jest trudniejsze. Szacunkowo można to przedstawić następująco: koszty emisji dla kapitału własnego mogą wynieść od 5% do 10% zebranego kapitału; dla emisji papierów dłużnych – od 1% do 3%. Różnica ta wyjaśnia jedną z przyczyn, dla których w strukturze kapitału korzysta się z dźwigni finansowej. Patrz też polityka dywidend. Koszty emisji są głównym powodem, dla którego marginalny (krańcowy) koszt kapitału zazwyczaj wzrasta w momencie, gdy spółka próbuje uzyskać większy wzrost od swojej trwałej stopy wzrostu. Wykorzystanie rynków kapitałowych jest rzeczą kosztowną. Skutki kosztów emisji mogą być włączone w koszty nowego, pozyskanego na rynku kapitału własnego (akcje zwykłe) w następujący sposób: </P>
+</H3>
+<P>
+ Jednorazowy wydatek w postaci kosztu transakcyjnego (w przeciwieństwie do powtarzającego się, okresowego kosztu kapitału), który umożliwia zebranie nowego kapitału. Kwota różni się w zależności od rodzaju kapitału (kapitał własny wobec zadłużenia), emitenta oraz rodzaju transakcji (np. pierwotne oferty publiczne są najdroższe). W przypadku własnego kapitału dochodzą koszty bieżące emisji, takie jak opłaty rejestracyjne, prospekt emisyjny, opłaty za biegłych rewidentów, prawników oraz usługi banków inwestycyjnych (doradztwo lub gwarancja). Jednocześnie obniżanie ceny emisyjnej (zamiast obrotu według ceny rynkowej) skutkuje dla dotychczasowych akcjonariuszy utratą korzyści. W przypadku emisji papierów dłużnych koszty emisji mogą obejmować uzyskanie oceny ratingowej oraz/lub opłaty należne kredytodawcom. Koszty emisji są zazwyczaj stałe, wobec tego procent zależy od zebranej kwoty. Ponieważ podniesienie kapitału jest najdroższe, zazwyczaj istnieje jakieś minimum, poniżej którego operacja robi się nieopłacalna. W związku z tym dla małych i średnich przedsiębiorstw dokapitalizowanie jest trudniejsze. Szacunkowo można to przedstawić następująco: koszty emisji dla kapitału własnego mogą wynieść od 5% do 10% zebranego kapitału; dla emisji papierów dłużnych – od 1% do 3%. Różnica ta wyjaśnia jedną z przyczyn, dla których w strukturze kapitału korzysta się z dźwigni finansowej. Patrz też polityka dywidend. Koszty emisji są głównym powodem, dla którego marginalny (krańcowy) koszt kapitału zazwyczaj wzrasta w momencie, gdy spółka próbuje uzyskać większy wzrost od swojej trwałej stopy wzrostu. Wykorzystanie rynków kapitałowych jest rzeczą kosztowną. Skutki kosztów emisji mogą być włączone w koszty nowego, pozyskanego na rynku kapitału własnego (akcje zwykłe) w następujący sposób: </P>
 
 <Table>
 <TR>
@@ -15581,15 +15581,13 @@ Wzrosty/Spadki
 <P>0 -200 </P>
 
 <P>Źródło: LC LiveCharts.Co.Uk </P>
-
+</Sect>
 <P>Lloyd’s of London • 
 <Link>Lloyd’s of London </Link>
 • Londyński rynek ubezpieczeń. Edward Lloyd żył w XVIII wieku i był właścicielem kawiarni przy londyńskiej Tower Street, gdzie odbywały się pierwsze nieformalne zebrania uczestników rynku. Dzisiaj Lloyd’s to jeden z największych dostarczycieli gwarancji ubezpieczeniowych i reasekuracyjnych, specjalizujący się również w ubezpieczeniach wyjątkowych i niecodziennych (np. ubezpieczenie nóg baletnicy). Lloyd’s ma niezwykle bogatą historię. W przeszłości tworzyli ją głównie indywidualni zamożni inwestorzy (mówiło się o nich names, czyli „nazwiska”), którzy gotowi byli zastawić osobisty majątek ruchomy jako wsparcie dla syndykatów wspólnie asekurujących ryzyka ubezpieczeniowe. Pokaźne kwoty wypłacane dzisiaj z tytułu roszczeń sprawiają, że na rynku Lloyda działają głównie duże, zarejestrowane spółki. Nie należy mylić Lloyd’s of London z Lloyds TSB Bank, brytyjskim bankiem clearingowym, który nie ma nic wspólnego z londyńskim rynkiem ubezpieczeń Lloyd’s. </P>
-</Sect>
-</Sect>
 
-<Sect>
-<H3>Londyńska Giełda Papierów Wartościowych • 
+
+<H3>Londyńska Giełda Papierów Wartościowych •
 <Link>London Stock Exchange </Link>
 </H3>
 
@@ -18880,9 +18878,7 @@ Dokonując analizy rynku pracy, jak scharakteryzowałbyś bieżącą podaż wykw
 
 <Link>ties (Traded/Listed/Marketable) </Link>
 • Świadectwa depozytowe (a w przypadku obrotu zdematerializowanego – zapisy komputerowe) potwierdzające prawo własności do aktywów finansowych, takich jak akcje, obligacje, warranty (prawa do objęcia akcji spółki w przyszłości według z góry ustalonej ceny) lub inne prawa będące przedmiotem obrotu giełdowego. Najpopularniejszymi papierami wartościowymi są rządowe papiery dłużne (bony skarbowe i obligacje skarbowe), obligacje emitowane przez spółki oraz akcje odzwierciedlające udział w kapitale dużych spółek publicznych notowanych na giełdach w Nowym Jorku, Londynie, Tokio, we Frankfurcie i w innych centrach finansowych. Wartość papierów wartościowych na giełdzie wyznaczana jest przez siły popytu i podaży. Ponieważ podaż w krótkim okresie jest stała (tj. równa liczbie akcji danej emisji), cenę kształtuje głównie wielkość popytu. W przypadku papierów war-tościowych o stałej stopie dochodu wielkość popytu waha się w zależności od aktualnych stóp procentowych oraz jakości kredytu. Mechanizmy popytu na akcje spółek są bardziej złożone, w związku z czym popyt ten podlega większej zmienności. Jest on przede wszystkim uzależniony od prognoz przyszłej rentowności emitenta (co określa się jako czynnik „fundamentalny”) oraz od ogólnej sytuacji na rynku (określanej jako czynnik „techniczny”). Kolejnym branym pod uwagę czynnikiem jest stopa zwrotu z inwestycji w akcje w porównaniu do stóp procentowych (ceny akcji zwykle spadają wraz ze wzrostem stóp procentowych). W przypadku papierów wartościowych będących w obrocie na tzw. rynkach głębokich (czyli o dużej płynności) zawsze istnieje możliwość ich upłynnienia w drodze sprzedaży po cenie bieżącej. </P>
-</Sect>
 
-<Sect>
 <H3>Papiery wartościowe poza obrotem giełdowym • 
 <Link>Unlisted Securities </Link>
 </H3>
@@ -19200,9 +19196,7 @@ Stany płynności (przedsiębiorstwa) Więcej niż potrzeba do działalności pl
 
 <Link>Status </Link>
 • Zobowiązanie (rezerwa – w polskim bilansie) z tytułu odroczonego podatku dochodowego firmy dla celów analizy finansowej może być traktowane w strukturze pasywów albo jako dług, albo jako kapitał własny. Traktowanie go jako dług jest zgodne z podejściem księgowym, gdyż wyraża zabezpieczenie przyszłych wydatków z tytułu podatku. Traktowanie go jako kapitał własny wynika z faktu, że nie wiąże się z nim żadne realne bieżące zobowiązanie (gdyby było to realne zobowiązanie podatkowe, w bilansie musiałoby być zaliczone do zobowiązań bieżących), dodatkowo biorąc pod uwagę fakt, że dzięki reinwestycjom w amortyzowane aktywa w kolejnych okresach również będzie występował podatek odroczony w pasywach. Argument pośredni sugeruje, aby traktować zobowiązanie z tytułu podatku odroczonego jako kapitał obcy o zerowej stopie oprocentowania, który należy poddać dyskontowaniu dla odzwierciedlenia spadku wartości pieniądza w czasie. W zależności od warunków (np. pewność co do przyszłego wzrostu firmy) analityk może dokonać korekty w sprawozdaniach dla celów podejmowania decyzji. </P>
-</Sect>
 
-<Sect>
 <H3>Podejmowanie decyzji finansowych • 
 <Link>Financial Decision Making </Link>
 • </H3>
@@ -25500,9 +25494,7 @@ Zobowiązania bieżące  –  Aktywa bieżące  =  Ujemny kapitał obrotowy </Fi
 <P id="LinkTarget_28101">Umorzenie obligacji • 
 <Link>Amortisation, Bond </Link>
 • Spłacenie obligacji, z łacińskiego słowa „mort” znaczącego „uśmiercić” w sensie zlikwidowania zobowiązania. Słowo to ma również inne znaczenie – odpisanie wartości niematerialnych – w rachunkowości (patrz również Kompendium terminów z zakresu rachunkowości po polsku i angielsku). </P>
-</Sect>
 
-<Sect>
 <H4>Umowa odsprzedaży • 
 <Link>Reverse Repurchase Agreement </Link>
 • 
@@ -50558,9 +50550,7 @@ MNC Domicile $ Billions ExxonMobil USA 371 General Electric USA 362 Citigroup US
 • 
 <Link>Kurs średni </Link>
 • A price half way between a higher buy price and a lower sell price on quoted financial securities. It is used in newspaper and website quotes in instances when there is no market clearing price. </P>
-</Div>
 
-<Div>
 <P>MiFID ▶ 
 <Link>Markets in Financial Instruments Directive</Link>
 . </P>
