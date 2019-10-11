@@ -47,31 +47,16 @@ def bookmarks(tree):
 
     return tokens
 
-def bookmark_element(elements, token):
-    """Find P/Link element in the doc corresponding to bookmark (token)"""
-    for pl in elements:
-        if contains(pl, token):
-            return pl
-    else: # for loop not finding next P/Link
-        print('Error: cannot find Element for', token)
-        return None
-        #sys.exit()
-    
-def bookmark_elements(tree):
-    """Return a generator over all Elements that contain the tokens with description."""
-    return tree.findall('//P[Link]') + tree.findall('//H3[Link]') + tree.findall('//H4[Link]') \
-        + tree.findall('//P')
-    
 def fragments(filename, dest = 'fragments'): 
     """Create html file with content for each search key."""
     tree = etree.parse(filename)
     tokens = bookmarks(tree)
-    elements = bookmark_elements(tree)
+    elements = bookmark_description_list(tree)
     
     # Some tokens don't have descriptions, remove them
     removables = []
     for i, token in enumerate(tokens):
-        plink = bookmark_element(elements, token)
+        plink = bookmark_description(elements, token)
         if plink is None:
             removables.append(token)
     # removing here, and not during iteration
@@ -79,7 +64,7 @@ def fragments(filename, dest = 'fragments'):
         tokens.remove(rem)
 
     for i, token in enumerate(tokens):
-        plink = bookmark_element(elements, token)
+        plink = bookmark_description(elements, token)
         initialize_tree(plink, token)
         # get siblings after this token
         siblings = plink.xpath('./following-sibling::*')
@@ -88,7 +73,7 @@ def fragments(filename, dest = 'fragments'):
             next_token = tokens[i + 1]
             found = False
             for sibling in siblings:
-                if equal(sibling, bookmark_element(elements, next_token)):
+                if equal(sibling, bookmark_description(elements, next_token)):
                     found = True
                     break; # done for this token
                 format_element(sibling)
@@ -99,8 +84,24 @@ def fragments(filename, dest = 'fragments'):
 
     print 'DONE', len(tokens)
 
+def bookmark_description(elements, token):
+    """Find P/Link element in the doc corresponding to bookmark (token)"""
+    for pl in elements:
+        if contains(pl, token):
+            return pl
+    else: # for loop not finding next P/Link
+        print('Error: cannot find Element for', token)
+        return None
+        #sys.exit()
+    
+def bookmark_description_list(tree):
+    """Return a list of all Elements that contain the tokens with description."""
+    return tree.findall('//P[Link]') + tree.findall('//H3[Link]') + tree.findall('//H4[Link]') \
+        + tree.findall('//P')
+    
+
 def equal(elem, plink):
-    """Return true if token is the beginning of the element text """
+    """Return true if these two elements are the same. """
     elem_text = ''.join(elem.itertext())
     plink_text = ''.join(elem.itertext())
     if (plink_text == elem_text):
@@ -121,7 +122,7 @@ def contains(plink, token):
     str1 = ''.join(plink.itertext())
     str2 = token
             
-    # compare first two elements separated by • for this file
+    # compare after removing last fragment separated by • 
     #str2_n = ""
     #if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
     #    partition = str2.rpartition(u'•')
@@ -130,22 +131,28 @@ def contains(plink, token):
     #        str2_n = str2_n.replace(u'\xa0', u' ')
     #        str2_n = re.sub('[\s -]', '', str2_n)
             
-    # remove non breaking space characters with simple space
-    str1 = str1.replace(u'\xa0', u' ')
-    str2 = str2.replace(u'\xa0', u' ')
-    str2 = str2.replace(u'\u202f', u' ')
+    
+    str1 = clean_str(str1)
+    str2 = clean_str(str2)
 
-    # remove - sign and whitespaces
-    str1c = re.sub('[\s -]', '', str1) 
-    str2c = re.sub('[\s -]', '', str2)
-    #if str2c in str1c.encode('utf-8'):
+    ## remove - sign and whitespaces
+    #str1c = re.sub('[\s -]', '', str1) 
+    #str2c = re.sub('[\s -]', '', str2)
+    ##if str2c in str1c.encode('utf-8'):
         
-    if str2c in str1c:
+    if str2 in str1:
         return 1 # true
     #if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc') and str2_n in str1c:
     #    return 2
     return 0
 
+def clean_str(s):
+    # remove non breaking space characters with simple space, new lines and - sign with space
+    s = s.replace(u'\xa0', u' ')
+    s = s.replace(u'\u202f', u' ')
+    s = re.sub('[\s -]', '', s) 
+    return s
+    
 def prefix(filename):
     if 'Bankowosc' in filename:
         return 'bankowosc'
@@ -157,9 +164,9 @@ def prefix(filename):
     sys.exit()
 
 
-#filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
+filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
 #filename = '../resources/xml/Glosariusz_SPPW_-_Finanse_modified.xml'
-filename = '../resources/xml/Glosariusz_SPPW_-Rachunkowosc_modified.xml'
+#filename = '../resources/xml/Glosariusz_SPPW_-Rachunkowosc_modified.xml'
 
 fragments(filename)
 
