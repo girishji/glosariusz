@@ -80,9 +80,8 @@ def fragments(filename, dest = 'fragments'):
         tokens.remove(rem)
 
     for i, token in enumerate(tokens):
-        #print '==================================================='
         plink = bookmark_element(elements, token)
-        #format_element(plink)
+        format_element(plink)
         # get siblings after this token
         siblings = plink.xpath('./following-sibling::*')
         next_token = None
@@ -93,7 +92,7 @@ def fragments(filename, dest = 'fragments'):
                 if equal(sibling, bookmark_element(elements, next_token)):
                     found = True
                     break; # done for this token
-                #format_element(sibling)
+                format_element(sibling)
             if not found:
                 print(token, "next token", next_token, " not found")
                 for sibling in siblings:
@@ -111,8 +110,27 @@ def equal(elem, plink):
     
 
 def format_element(elem):
-    print elem.text
-
+    if elem.tag == 'P':
+        x = 1
+    elif elem.tag == 'Table':
+        x = 1        
+    elif elem.tag == 'L':
+        x = 1
+    elif elem.tag == 'Figure':
+        x = 1
+    elif elem.tag == 'Link':
+        x = 1
+    elif elem.tag == 'H1':
+        x = 1
+    elif elem.tag == 'H2':
+        x = 1
+    elif elem.tag == 'H3':
+        x = 1
+    elif elem.tag == 'H4':
+        x = 1
+    else:
+        print ('tag', elem.tag)
+    
 def contains(str1, str2):
     """If str1 contains str2"""
     
