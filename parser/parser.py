@@ -47,41 +47,68 @@ def bookmarks(tree):
 
     return tokens
 
+def bookmark_full_text(token, tree):
+    """In cases where token has no description in body of doc, reuse description from bookmark. """
+    bookmarks = tree.findall("//bookmark[@title]")
+    for item in bookmarks:
+        bm = item.get('title')
+        if token in bm:
+            return bm
+    sys.exit()
+
+def remove_orphans(tokens, elements, tree):
+    # Deal with bookmarks with no description in body
+    removables = []
+    for i, token in enumerate(tokens):
+        plink = bookmark_description(elements, token)
+        if plink is None:
+            frag = initialize_frag(None, token, bookmark_full_text(token, tree))
+            removables.append(token)
+            write_frag(frag)
+            
+    # remove tokens without descr.
+    for rem in removables:
+        tokens.remove(rem)
+
 def fragments(filename, dest = 'fragments'): 
     """Create html file with content for each search key."""
     tree = etree.parse(filename)
     tokens = bookmarks(tree)
     elements = bookmark_description_list(tree)
+
+    # XXX
+    #tokens = remove_orphans(tokens, elements, tree)
     
-    # Some tokens don't have descriptions, remove them
-    removables = []
     for i, token in enumerate(tokens):
+        if i == 0:
+            continue
+        if i == 2:
+            break
         plink = bookmark_description(elements, token)
         if plink is None:
-            removables.append(token)
-    # removing here, and not during iteration
-    for rem in removables:
-        tokens.remove(rem)
-
-    for i, token in enumerate(tokens):
-        plink = bookmark_description(elements, token)
-        initialize_tree(plink, token)
+            sys.exit('bookmark description not foudn')
+        frag = initialize_frag(plink, token)
         # get siblings after this token
         siblings = plink.xpath('./following-sibling::*')
+        #for sibling in siblings:
+        #    print(sibling.tag, sibling.text)
         next_token = None
         if i != (len(tokens) - 1): # not the last token
             next_token = tokens[i + 1]
             found = False
             for sibling in siblings:
-                if equal(sibling, bookmark_description(elements, next_token)):
+                next_element = bookmark_description(elements, next_token)
+                if equal(sibling, next_element):
                     found = True
                     break; # done for this token
-                format_element(sibling)
+                frag.append(sibling)
             if not found:
                 print(token, "next token", next_token, " not found")
-                for sibling in siblings:
-                    print(sibling.text)
-
+                sys.exit('next token not found')
+        else: # last token
+            for sibling in siblings:
+                frag.append(sibling)
+        write_frag(frag)
     print 'DONE', len(tokens)
 
 def bookmark_description(elements, token):
@@ -92,65 +119,90 @@ def bookmark_description(elements, token):
     else: # for loop not finding next P/Link
         print('Error: cannot find Element for', token)
         return None
-        #sys.exit()
     
 def bookmark_description_list(tree):
     """Return a list of all Elements that contain the tokens with description."""
     return tree.findall('//P[Link]') + tree.findall('//H3[Link]') + tree.findall('//H4[Link]') \
-        + tree.findall('//P')
+        + tree.findall('//H3') + tree.findall('//P')
     
-
 def equal(elem, plink):
     """Return true if these two elements are the same. """
     elem_text = ''.join(elem.itertext())
-    plink_text = ''.join(elem.itertext())
+    plink_text = ''.join(plink.itertext())
     if (plink_text == elem_text):
         return 1
     return 0
     
-
-def initialize_tree(elem, token):
+def initialize_frag(elem, token, token_full_text=""):
     """Create a new xml tree with a root and add first element (bookmark description element) """
-    part = etree.Element("Part") # root of tree
-    # format the element
-    elem_text = ''.join(elem.itertext())
-    
+    text = ""
+    if token_full_text:
+        text = token_full_text
+    else:
+        text = ''.join(elem.itertext())
+        if contains(elem, token) == 2:
+            siblings = elem.xpath('./following-sibling::*')
+            if len(siblings) >= 1:
+                sibling = siblings[0]
+                text = text + ''.join(sibling.itertext())
+        
+    # filter
+    frag = etree.Element('Frag')
+    child = etree.SubElement(frag, 'Main')
+    nchild = etree.SubElement(child, 'Token')
+    nchild.text = token
+    nchild = etree.SubElement(child, 'Description')
+    nchild.text = filter_out(token, text)
+    return frag
 
+def filter_out(token, text):
+    text = clean_str(text, ' ')
+    token = clean_str(token, ' ')
+    i, j = 0, 0
+    while i < len(token) and j < len(text):
+        if token[i] == ' ':
+            i += 1
+        elif text[j] == ' ':
+            j += 1
+        elif token[i] != text[j]:
+            sys.exit('token and text mismatch ' + token + ' [TEXT]: ' + text)
+        else:
+            i += 1
+            j += 1
+
+    if i == len(token):
+        if j != len(text):
+            return text[j:]
+        
+    sys.exit('token and text length mismatch')
     
 def contains(plink, token):
     """If plink text contains token"""
     str1 = ''.join(plink.itertext())
     str2 = token
-            
-    # compare after removing last fragment separated by • 
-    #str2_n = ""
-    #if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
-    #    partition = str2.rpartition(u'•')
-    #    if partition[1]:
-    #        str2_n = partition[0].rstrip()
-    #        str2_n = str2_n.replace(u'\xa0', u' ')
-    #        str2_n = re.sub('[\s -]', '', str2_n)
-            
-    
-    str1 = clean_str(str1)
-    str2 = clean_str(str2)
-
-    ## remove - sign and whitespaces
-    #str1c = re.sub('[\s -]', '', str1) 
-    #str2c = re.sub('[\s -]', '', str2)
+    str1c = clean_str(str1)
+    str2c = clean_str(str2)
     ##if str2c in str1c.encode('utf-8'):
         
-    if str2 in str1:
+    if str1c.startswith(str2c):
         return 1 # true
-    #if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc') and str2_n in str1c:
-    #    return 2
+
+    if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc'):
+        siblings = plink.xpath('./following-sibling::*')
+        if len(siblings) >= 1:
+            sibling = siblings[0]
+            str3 = str1 + ''.join(sibling.itertext())
+            str3c = clean_str(str3)
+            if str3c.startswith(str2c):
+                return 2
+
     return 0
 
-def clean_str(s):
+def clean_str(s, insert=''):
     # remove non breaking space characters with simple space, new lines and - sign with space
     s = s.replace(u'\xa0', u' ')
     s = s.replace(u'\u202f', u' ')
-    s = re.sub('[\s -]', '', s) 
+    s = re.sub('[\s -]', insert, s)
     return s
     
 def prefix(filename):
@@ -161,12 +213,15 @@ def prefix(filename):
     if 'Rachunkowosc' in filename:
         return 'rachunkowosc'
     print("Error")
-    sys.exit()
+    sys.exit('prefix mismatch')
 
-
-filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
+def write_frag(frag):
+    # Replace sys.stdout with a file object pointing to your object file:
+    etree.ElementTree(frag).write(sys.stdout, encoding='utf-8', xml_declaration = True, pretty_print = True)
+    
+#filename = '../resources/xml/Glosariusz_SPPW_-_Bankowosc_modified.xml'
 #filename = '../resources/xml/Glosariusz_SPPW_-_Finanse_modified.xml'
-#filename = '../resources/xml/Glosariusz_SPPW_-Rachunkowosc_modified.xml'
+filename = '../resources/xml/Glosariusz_SPPW_-Rachunkowosc_modified.xml'
 
 fragments(filename)
 
