@@ -50,8 +50,7 @@ def bookmarks(tree):
 def bookmark_element(elements, token):
     """Find P/Link element in the doc corresponding to bookmark (token)"""
     for pl in elements:
-        text = ''.join(pl.itertext())
-        if contains(text, token):
+        if contains(pl, token):
             return pl
     else: # for loop not finding next P/Link
         print('Error: cannot find Element for', token)
@@ -81,7 +80,7 @@ def fragments(filename, dest = 'fragments'):
 
     for i, token in enumerate(tokens):
         plink = bookmark_element(elements, token)
-        format_element(plink)
+        initialize_tree(plink, token)
         # get siblings after this token
         siblings = plink.xpath('./following-sibling::*')
         next_token = None
@@ -109,39 +108,27 @@ def equal(elem, plink):
     return 0
     
 
-def format_element(elem):
-    if elem.tag == 'P':
-        x = 1
-    elif elem.tag == 'Table':
-        x = 1        
-    elif elem.tag == 'L':
-        x = 1
-    elif elem.tag == 'Figure':
-        x = 1
-    elif elem.tag == 'Link':
-        x = 1
-    elif elem.tag == 'H1':
-        x = 1
-    elif elem.tag == 'H2':
-        x = 1
-    elif elem.tag == 'H3':
-        x = 1
-    elif elem.tag == 'H4':
-        x = 1
-    else:
-        print ('tag', elem.tag)
+def initialize_tree(elem, token):
+    """Create a new xml tree with a root and add first element (bookmark description element) """
+    part = etree.Element("Part") # root of tree
+    # format the element
+    elem_text = ''.join(elem.itertext())
     
-def contains(str1, str2):
-    """If str1 contains str2"""
+
     
+def contains(plink, token):
+    """If plink text contains token"""
+    str1 = ''.join(plink.itertext())
+    str2 = token
+            
     # compare first two elements separated by • for this file
-    str2_n = ""
-    if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
-        partition = str2.rpartition(u'•')
-        if partition[1]:
-            str2_n = partition[0].rstrip()
-            str2_n = str2_n.replace(u'\xa0', u' ')
-            str2_n = re.sub('[\s -]', '', str2_n)
+    #str2_n = ""
+    #if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
+    #    partition = str2.rpartition(u'•')
+    #    if partition[1]:
+    #        str2_n = partition[0].rstrip()
+    #        str2_n = str2_n.replace(u'\xa0', u' ')
+    #        str2_n = re.sub('[\s -]', '', str2_n)
             
     # remove non breaking space characters with simple space
     str1 = str1.replace(u'\xa0', u' ')
@@ -155,8 +142,8 @@ def contains(str1, str2):
         
     if str2c in str1c:
         return 1 # true
-    if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc') and str2_n in str1c:
-        return 1
+    #if (prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc') and str2_n in str1c:
+    #    return 2
     return 0
 
 def prefix(filename):
