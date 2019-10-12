@@ -1,12 +1,24 @@
 
+* run the script to remove <Sect> and <Div> elements, since they randomly divide the document; much easier to find all children
+  in the same level
 * Removed a few paragraphs from all xml files in resources/xml as it contained author data and some malformed data
-* Removed one </Sect> and <Sect> and two </Div> <Div> to merge the sections so siblings can be found in xpath(following-sibing)
+* Some descriptions are malformed. Can have 'xyz abc xyz abc...' (repeated words compared to bookmark), or can have
+  some number in the front. Manually edit them out (not many). List all bookmark tokens not found and then look at document.
+* Note the above if you want to repeat the process for xml files with jpeg and png links
 
 --
 
 use these tips to install lxml
 https://stackoverflow.com/questions/27008222/importerror-no-module-named-lxml-even-though-lxml-is-installed
 
+--
+# https://lxml.de/api.html
+# https://docs.python.org/2/library/xml.etree.elementtree.html
+# https://docs.python.org/3/tutorial/index.html
+# https://stackoverflow.com/questions/21129020/how-to-fix-unicodedecodeerror-ascii-codec-cant-decode-byte
+# https://stackoverflow.com/questions/279561/what-is-the-python-equivalent-of-static-variables-inside-a-function
+
+# exec(open("./parser.py").read())
 --
 
 to run apache:
