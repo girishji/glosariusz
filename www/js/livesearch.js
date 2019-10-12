@@ -10,6 +10,15 @@
 // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
 // https://getbootstrap.com/docs/3.4/javascript/
 
+// XXX
+var dictionary = [
+    [ '(Accounting) Standard-setters • Organy ustanawiające standardy rachunkowości', 'Glosariusz_SPPW_-Rachunkowosc/part1186.htm' ],
+    [ '(International) Public Interest Oversight Board • PIOB • (Międzynarodowa) Rada ds. Ochrony Interesu Publicznego', 'Glosariusz_SPPW_-Rachunkowosc/part1797.htm' ],
+    [ '(Międzynarodowa) Rada ds. Ochrony Interesu Publicznego • (International) Public Interest Oversight Board • PIOB', 'Glosariusz_SPPW_-Rachunkowosc/part423.htm' ],
+    [ '(The) Hundred Group • Grupa Stu', 'Glosariusz_SPPW_-_Finanse/part1647.htm' ],
+    [ '(The) Monitoring Group (of Public Interest Oversight Board) • Zespół Monitorujący (Rady ds. Ochrony Interesu Publicznego)', 'Glosariusz_SPPW_-Rachunkowosc/part1886.htm' ],
+];
+
 var dictMap = new Map(dictionary);
 var list = Array.from(dictMap.keys());
 
@@ -35,10 +44,14 @@ $('#myDropdown').on('shown.bs.dropdown', function () {
 
 //If the user clicks on any item, get the text of the item and set content
 $('#myDropdownMenu').on('click', '.dropdown-item', function() {
+    
     let key = $(this).html();
     if (dictMap.has(key)) {
         url = dictMap.get(key);
-        addContent(url);
+        //addContent(url);
+        // XXX
+        addContent('frags/578e22d7d56.xml');
+
     }
     $('.dropdown-toggle').dropdown('toggle');
 })

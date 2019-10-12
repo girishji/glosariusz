@@ -1,8 +1,7 @@
 # remove Sect and Div tags from xml files before doing anything else
 
 ls -1 *.xml | while read x; do
-                  sed -e 's/<Sect>//g' -e 's/<\/Sect>//g' -e 's/<Div>//g' -e 's/<\/Div>//g' \
-                      -e 's/<Caption>//g' -e 's/<\/Caption>//g' $x > ${x%%.*}.new
+                  sed -e 's/<Sect>//g' -e 's/<\/Sect>//g' -e 's/<Div>//g' -e 's/<\/Div>//g' $x > ${x%%.*}.new
                   echo $x;
               done
 

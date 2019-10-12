@@ -115,7 +115,7 @@ def process_orphans(tokens, ranking):
         if not token in found:
             print(token, 'description not found')
             frag = init_frag(token, tokens[token])
-            write_frag(frag)
+            write_frag(frag, token)
 
 ############################################################
 
@@ -252,13 +252,13 @@ def write_frag(frag, token):
     #reparsed = parseString(rough_string)
     #prettystr = reparsed.toprettyxml(indent="    ")
 
-    fname = md5.new(token).hexdigest()
+    fname = md5.new(token.encode('utf8')).hexdigest()
     fname = fname[21:]
-    fpath = dirname + '/' + fname
+    fpath = dirname + '/' + fname + '.xml'
     if os.path.isfile(fpath):
         sys.exit('error:', fname, 'exists')
     with open(fpath, 'wb') as f:
-        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="' + prefix(filename)
+        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
                 + '.xsl" type="text/xsl"?>'.encode('utf8'))
         ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
     f.closed
@@ -272,7 +272,7 @@ def write_frag(frag, token):
         
 ############################################################
 
-dirname = 'frags'
+dirname = '../www/frags'
 if (not os.path.isdir(dirname)) or len(os.listdir(dirname)) != 0:
     sys.exit(dirname, 'does not exist or is not empty')
 filename = sys.argv[1]

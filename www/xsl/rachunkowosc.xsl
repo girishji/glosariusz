@@ -16,11 +16,19 @@
   </xsl:template>
 
   <xsl:template match="Main">
-    <div class="xxx">
+    <p class="lead">
       <xsl:apply-templates/>
-    </div>
+    </p>
   </xsl:template>
 
+  <xsl:template match="Token">
+    <strong> <xsl:apply-templates/> </strong>
+  </xsl:template>
+
+  <xsl:template match="Description">
+    <span> <xsl:apply-templates/> </span>
+  </xsl:template>
+    
   <xsl:template match="content">
     <p align="center"> <xsl:apply-templates/> </p>
   </xsl:template>

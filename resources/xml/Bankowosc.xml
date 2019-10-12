@@ -3828,42 +3828,42 @@ a debt. The query is most common in consum">
 
 <P>Tłumaczenie / Translation </P>
 
-
+<Sect>
 <H5>Krzysztof Kajetanowicz, Karol Sijka, Paweł Granicki </H5>
 
 <P>Konsultacje / Consultation </P>
+</Sect>
 
-
-
+<Sect>
 <H5>Tomasz Zając </H5>
 
 <P>Opracowanie typograficzne / Typesetting </P>
+</Sect>
 
-
-
+<Sect>
 <H5>Wojciech Stukonis </H5>
 
 <P>Rysunki / Cartoons </P>
+</Sect>
 
-
-
+<Sect>
 <H5>Piotr Ziółkowski </H5>
 
 <P>Projekt graficzny okładki / Cover design </P>
+</Sect>
 
-
-
+<Sect>
 <H5>Janusz Fajto </H5>
 
 <P>Fotografia na okładce / Photo on the cover </P>
+</Sect>
 
-
-
+<Sect>
 <H5>CORBIS </H5>
 
 <P>Przygotowanie pliku PDF do wydania elektronicznego / PDF file preparation for this edition </P>
 
-
+<Sect>
 <H5>Stämpfli Polska Sp. z o.o. </H5>
 
 <P>© Copyright by Robert Patterson © Copyright for this edition by Ministerstwo Finansów by arrangement with the Swiss-Polish Cooperation Program – Financial Reporting Technical Assistance Program (FRTAP) </P>
@@ -3953,8 +3953,8 @@ Aktywa w zarządzaniu • Assets Under Administration/Management – </P>
 <P>Kompendium termin </P>
 
 <P>z zakresu bankowości </P>
-
-
+</Sect>
+</Sect>
 </Part>
 
 <Part>
@@ -4284,6 +4284,7 @@ Dokumenty Akredytywa Dokument Wniosek Potwierdzona akredytywa Dokument Towary To
 
 <P>* może to być inny bank, np. bank wypłacający </P>
 
+<Sect>
 <H3>Aktywa bankowe ważone ryzykiem • 
 <Link>Risk Weighted Bank Assets, RWA </Link>
 </H3>
@@ -4495,9 +4496,9 @@ Aktywa służące jakozabezpieczenie </Figure>
 
 <ImageData src=""/>
 Średnia ? ? ? Przyznano Odmówiono 
-
+<Caption>
 <P>likwidacja wycofanie wsparcie promowanie </P>
-
+</Caption>
 </Figure>
 
 <P>Wyniki </P>
@@ -4519,9 +4520,9 @@ Aktywa służące jakozabezpieczenie </Figure>
 <TH>Użyteczność banków dla społeczeństwa zależy w dużej mierze od ich zdolności do oceny ryzyka i chęci jego zaakceptowania. To ich zadanie. Tak przyczyniają się do efektywnej alokacji zasobów gospodarczych. Bez podejmowania ryzyka banki byłyby firmami sterylnymi, a nawet pasożytami. Ellemore C. Patterson, prezes Morgan Stanley „Journal of Commercial Bank Lending”, styczeń 1978 r. </TH>
 </TR>
 </Table>
+</Sect>
 
-
-
+<Sect>
 <H3>Alternatywne metody transferu ryzyka • 
 <Link>Alternative Risk Transfer (ART) </Link>
 </H3>
@@ -6057,9 +6058,9 @@ Zyski dziesięciu największych polskich banków Rok RoE Dźwignia RoA EA Ratio 
 <TH>Naszym celem jest przygotowanie firmy do powrotu do przyszłości w postaci klasycznego banku kupieckiego. Chcemy być przedsiębiorstwem niszowym, o wyrazistych opiniach, prowadzącym konserwatywną bankowość prywatną i doradzającym klientom na wysokim poziomie. W świecie rządzonym przez niepewność tradycyjne podejście odzyska walor nowoczesności (…). Istniejemy nie po to, żeby konkurować z kimś o miejsce w tabeli. Zawsze będziemy firmą małą (…). Ludzie chcą z nami pracować, bo czują się bezpiecznie. Szef banku kupieckiego w wystąpieniu Odkurzamy strategię kupiecką „International Herald Tribune”, 16 grudnia 2010 r., s. 22 </TH>
 </TR>
 </Table>
+</Sect>
 
-
-
+<Sect>
 <H3>Bankowość o ściśle sprecyzowanych cechach • 
 <Link>Limited Purpose Banking </Link>
 </H3>
@@ -6897,9 +6898,9 @@ Bezsporny tytuł </Figure>
 
 <ImageData src=""/>
 Wolumen obrotów papierami wartościowymi, I poł. 2000 r. 
-
+<Caption>
 <P>0 0,5 1, 0 1,5 2,0 2,5 3,0 </P>
-
+</Caption>
 </Figure>
 
 <P>Club Deal • 
@@ -7554,13 +7555,13 @@ z rankingu Niemcy Litwa Węgry Czechy Słowacja Polska Rosja Białoruś 4,0 5,0 
 <ImageData src=""/>
 Dostępność linii kredytowej to maksymalny poziom jednorazowego wykorzystania kredytu w dowolnym momencie. Określa się ją na podstawie kwalifikowanych aktywów, na które pożyczkobiorca może wziąć kredyt. $$$ Zapotrzebowanie Kredyt do wykorzystania Limit Dostępność Wykorzystanie Czas Na podstawie wiarygodności kredytowej przy założeniu kontynuacji działania Wzór </Figure>
 
-
+<Sect>
 <H6>= maksymalne dozwolone ryzyko pożyczkobiorcy = maksymalna „dostępność” </H6>
 
 <P>= maksymalne dozwolone wykorzystanie na podstawie wymagania pokrycia marginesu wypłacalności </P>
+</Sect>
 
-
-
+<Sect>
 <H6>= rzeczywista wysokość pożyczonych i posiadanych środków </H6>
 
 <P>Drobny kredyt • 
@@ -8074,9 +8075,9 @@ Dżentelmeński kodeks bankowy </Figure>
 <TH>Odpowiedź Japończyków na stojące przed nimi wyzwania była bojaźliwa… Rząd Japonii pozwolił na narośnięcie złego długu i zachęcał banki do sztucznego podtrzymywania przy życiu firm zombie. Pogrążyło to sektor bankowy na co najmniej dekadę. Największe sumy inwestowano w obligacje rządowe kosztem kredytów dla klientów… Banki japońskie stały się nabywcami ponad połowy całego długu publicznego Japonii. Special Report on International Banking,„The Economist”, 12 maja 2011 r. </TH>
 </TR>
 </Table>
+</Sect>
 
-
-
+<Sect>
 <H4 id="LinkTarget_16161">Fundusze typu SIV • 
 <Link>Special Investment Vehicles (SIV) a.k.a. “Conduits” </Link>
 </H4>
@@ -9168,10 +9169,10 @@ Rok </Figure>
 <TH>Analityków interesuje kapitał w wartości księgowej, nadzór – kapitał regulacyjny, natomiast wewnętrznych guru i zarządzających ryzykiem – kapitał ekonomiczny. Łatwo sobie wyobrazić, jak denerwująca musi być taka dyskusja. Te trzy miary kapitału bankowego nie zbliżają się do siebie wartością prawie nigdy, a może nawet nigdy. Brian Ranson, Credit Risk Management (2003), s. 246 </TH>
 </TR>
 </Table>
+</Sect>
+</Sect>
 
-
-
-
+<Sect>
 <H3>Kapitał ekonomiczny banku/kapitał • 
 <Link>Economic Bank Capital/Equity </Link>
 </H3>
@@ -9315,9 +9316,9 @@ Kompleksowa analiza ekonomiczno-finansowa </Figure>
 
 <ImageData src=""/>
 Źródło: Roczny raport BIS, 2004/„The Economist”, 21 maja 2005 r. 0 15 30 45 60 75 90 -37% -54 -33 -36 -56 -33 + -6 -32 + -22 Szwecja Holandia Belgia Szwajcaria Finlandia Norwegia Francja Austria Wlk. Brytania Włochy Niemcy % zmniejszenia liczby oddziałów od 1990 r. </Figure>
+</Sect>
 
-
-
+<Sect>
 <H3>Konflikt interesów (w bankowości) • 
 <Link>Conflicts of Interest (in Banking) </Link>
 </H3>
@@ -10017,9 +10018,9 @@ Roczne wskaźniki cena/zysk na podst. indeksów giełdowych 15% 12% 9% 6% 3% ●
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>90 92949698 0003 </P>
-
+</Caption>
 Największe krachy banków do 2010 r. Royal Bank of Scotland Northern Rock Lehman Brothers Bear Stearns Washington Mutual Countrywide $.2 $.3 $.35 $.6 $2.0 $2.1 Aktywaw milionach USD </Figure>
 
 <P>Źródło: raporty firm </P>
@@ -10269,9 +10270,9 @@ Największe krachy banków do 2010 r. Royal Bank of Scotland Northern Rock Lehma
 
 <ImageData src=""/>
 = Kwota główna Zapadalność = pełna spłata Spłata = do spłaty 
-
+<Caption>
 <P>0 123 45 </P>
-
+</Caption>
 </Figure>
 <Figure>
 
@@ -10846,7 +10847,7 @@ Krok Zagadnienie Dylematy Analiza </Figure>
 <ImageData src=""/>
 </Figure>
 
-
+<Sect>
 <H5>John Law </H5>
 
 <P>Karykatura szkockiego spekulanta Johna Lawa, po raz pierwszy opublikowana w 1720 roku. Źródło: Wikipedia </P>
@@ -11014,9 +11015,9 @@ Prognoza dużego odbicia w akcjach Lehman </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>XI 2007 II 2008 IV 2008 VII 2008 </P>
-
+</Caption>
 </Figure>
 
 <P>Źródło: Datastream </P>
@@ -11116,9 +11117,9 @@ Prognoza dużego odbicia w akcjach Lehman </Figure>
 <ImageData src=""/>
 Na podst. zdolności kredytowej przy założeniu ciągłości działania Potrzeba Kredyt do wykorzystania Marża </Figure>
 Limit Dostępność </P>
+</Sect>
 
-
-
+<Sect>
 <H4>Wykorzystanie </H4>
 
 <P>Czas = maks. dozwolona ekspozycja na kredytobiorcę; maks. „dostępność&quot; = maks. dozwolone wykorzystanie na podst. wymagania pokrycia marginesu wypłacalności = rzeczywista wysokość pożyczonych i posiadanych środków </P>
@@ -11395,7 +11396,7 @@ Bezpieczeństwo/reputacja Wiarygodność/rzetelność Wygoda/lokalizacja Obsług
 
 <P>Łączna wartość podzielonych  aktywów (ł.w.p.a.) </P>
 
-
+<Sect>
 <H5>Aktywa łącznie Aktywa podzielone </H5>
 <Figure>
 
@@ -11411,12 +11412,12 @@ Likwidacja </Figure>
 <P>– koszty = ł.w.p.a. </P>
 
 <P id="LinkTarget_16231">M </P>
+</Sect>
+</Sect>
+</Sect>
 
-
-
-
-
-
+<Sect>
+<Div>
 <H3>Maksymalne zagrożenie finansowe, ekspozycja • 
 <Link>Exposure (Financial) </Link>
 </H3>
@@ -11920,9 +11921,9 @@ $$ Czas Margines bezpieczeństwa to różnica między wartością przedmiotu zas
 
 <ImageData src=""/>
 Średni okres aktualności ratingów (lata) w USA 
-
+<Caption>
 <P>Aaa Aa ABaa Ba B Caa </P>
-
+</Caption>
 </Figure>
 <Figure>
 
@@ -12138,11 +12139,11 @@ Modeleilościowe </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>J. P. Morgan 1837–1913 </P>
 
 <P>Źródło: Wikipedia </P>
-
+</Caption>
 </Figure>
 <Figure id="LinkTarget_16248">
 
@@ -12660,9 +12661,9 @@ Papiery wartościowe typu subprime zabezpieczone aktywami, wyemitowane w latach 
 
 <ImageData src=""/>
 Po sfinansowaniu długoterminowych aktywów lub deficytu wykorzystano krótkoterminową linię kredytową Wysokość Finansowane aktywa Wykorzystana linia kredytowa Niedobór zabezpieczenia 
-
+<Caption>
 <P>Czas </P>
-
+</Caption>
 </Figure>
 
 <P id="LinkTarget_16264">Niedotrzymanie terminu płatności • 
@@ -13462,9 +13463,9 @@ Minimalny poziom kapitału własnego wyrażony w % aktywów z założeniem kapit
 
 <ImageData src=""/>
 = USA: ochrona zakupiona = USA: ochrona sprzedana = globalnie 
-
+<Caption>
 <P>1997 98 99 2000 01 02 </P>
-
+</Caption>
 </Figure>
 
 <P>400 300 200 100 0 </P>
@@ -13564,9 +13565,9 @@ Minimalny poziom kapitału własnego wyrażony w % aktywów z założeniem kapit
 
 <ImageData src=""/>
 Karty kredytowe USA Kredyty dla firm % niespłaconego portfela brutto 
-
+<Caption>
 <P>969798 9900010203 Rok </P>
-
+</Caption>
 </Figure>
 
 <P>Odpowiednie wyprzedzenie • 
@@ -13577,7 +13578,7 @@ Karty kredytowe USA Kredyty dla firm % niespłaconego portfela brutto
 
 <ImageData src=""/>
  </Figure>
-Odpowiedzi po kryzysie kredytowym •
+ Odpowiedzi po kryzysie kredytowym •
 <Link>Post-Credit Crisis Responses </Link>
 – </P>
 
@@ -13695,7 +13696,7 @@ Odpowiedzi po kryzysie kredytowym •
 
 <ImageData src=""/>
  </Figure>
-Odpowiedzialne finanse (potoczne) •
+Odpowiedzialne finanse (potoczne) • 
 <Link>Responsible Finance </Link>
 (vernacular) </P>
 
@@ -14088,9 +14089,9 @@ Przykład: oświadczenie majątkowe Aktywa (wartość rynkowa) Zobowiązania Got
 
 <ImageData src=""/>
 Podmioty prywatne Fannie Mae i Freddie Mac Ginnie Mae 
-
+<Caption>
 <P>1990 1993 1996 1999 2002 2005 2008 </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -15408,9 +15409,9 @@ Boom lat 2005–2007 doprowadził do załamania Historia </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>1901–1920 1921–1940 1941–1950 1961–1980 1981–1990 1991–2004 </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -17272,9 +17273,9 @@ Indeks Markit iTraxx Europe FTSE Eurofirst 300 </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>200405 06 07 08 09 10 11* </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -17536,9 +17537,9 @@ Wlk. Bryt. skargi konsumentów wg sektora 2005 42% dostawcy ubezp. na życie i p
 
 <ImageData src=""/>
 Upadłości banków komercyjnych objęte ochroną Federalnego Funduszu Ubezpieczenia Depozytów (FDIC) 
-
+<Caption>
 <P>1935 1940 1945 1950 1955 1960 1965 1970 1975 1980 1985 1990 1995 2000 </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -18332,9 +18333,9 @@ A</Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>1950 1955 1960 1965 1970 1975 1980 1985 1990 1995 2000 </P>
-
+</Caption>
 </Figure>
 
 <P>Spłata, zwrot • 
@@ -18906,9 +18907,9 @@ Strzyżenie </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>2009 – rynek derywat kredytowych wg typu produktu </P>
-
+</Caption>
 </Figure>
 
 <P>Swapy na zdarzenie kredytowe 97,96% </P>
@@ -19540,11 +19541,11 @@ Indie (Mumbaj, NHB Residex) RPA (ABSA HPI) </P>
 
 <ImageData src=""/>
 Przełamanie w sierpniu 2007: ostrzeżenie przed ryzykiem systemowym Szczyt 10.10.2008: 459 punktów bazowych 
-
+<Caption>
 <P>12.01.06 02.20.07 05.10.07 07.30.07 10.17.07 01.04.08 03.25.08 06.12.08 09.01.08 11.18.08 02.06.09 04.28.09 </P>
 
 <P>Źródło: Thomson Financial </P>
-
+</Caption>
 </Figure>
 
 <P>Termin zapadalności • 
@@ -19968,9 +19969,9 @@ Mały apetyt inwestycyjny </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>JFMAMJ JASONDJ FMAMJ JA 2010 2011 </P>
-
+</Caption>
 </Figure>
 
 <P>Załamanie celów rekapitalizacyjnych EBA 120 </P>
@@ -21212,9 +21213,9 @@ Nadwyżka Limit Użycie Duże wahania w użyciu kredytu spowodowane naprzemienny
 
 <ImageData src=""/>
 Niefinansowe (prawa skala) Finansowe (lewa skala) Zabezpieczone aktywami (lewa skala) 
-
+<Caption>
 <P>2003 2004 2005 2006 2007 2008 </P>
-
+</Caption>
 </Figure>
 
 <P>290 250 210 170 130 </P>
@@ -22138,9 +22139,9 @@ Wysoka zależność od zaufania rynku </Figure>
 </Table>
 
 <P>Dwoma głównymi aspektami w ustalaniu wskaźnika pokrycia są jakość zabezpieczenia oraz zdolność kredytowa pożyczkobiorcy. Jednakże w przypadku kredytu obrotowego wskaźnik pokrycia może także zostać ustalony według chęci (zob. doktryna rzeczywistych weksli) sfinansowania odpowiedniej kwoty wartości aktywów bieżących, tak aby kredyt zmieniał się wraz z wymiarem sprzedaży. Ten schemat nie ma nic wspólnego z realizacją zabezpieczenia, ale raczej jest skierowany na zdyscyplinowanie kredytobiorcy w celu uniknięcia przegrzania. </P>
+</Div>
 
-
-
+<Div>
 <P id="LinkTarget_16482">Wskaźniki upadłości </P>
 
 <P>595 </P>
@@ -28532,9 +28533,9 @@ Bank holiday </Figure>
 <TH>All his reflections and speculations inevitably led to the one conclusion: he must get his hands on a large sum of money, if not legally, then by theft. But when should he perform this crime? Where? Strange that although he had been contemplating this deed for months now, he never even entered a bank, nor familiarised himself with banking procedure; he had not even determined where the banks stored their money during closing hours, nor the types of safes or locks they employed. He had procrastinated, procrastinated. Whenever he passed a bank, he stepped quickly, averting his face. It was one thing to open a lock on the stage or before the Piask gang, another to steal into a building manned by armed guards. For that, one had to be a born thief. The Magician of Lublin (1960) by Isaac Singer, Chapter 5 </TH>
 </TR>
 </Table>
+</Div>
 
-
-
+<Div>
 <P>Banker • 
 <Link>Bankowiec</Link>
  – Somebody whose career involves dealing in money, helping customers gain access to capital and managing risk. A basic distinction is between commercial bankers who are engaged lending relationships and investment bankers who are engaged in trading transactions in the capital markets. Not everybody who works in a bank necessarily sees themselves as a “banker”. For example, tellers, clerks and head office technical specialists may not identify with the description (they would rather just say that they ‘work in a bank’). While bankers typically possess commercial common sense and will have a liking and a talent in the financial arts, they will not necessarily share the animal spirits of the entrepreneur (see quote below). See also bad banker, Bagehot, banker (casino version), commercial banker (attributes vs. other bankers) and investment banker (attributes). </P>
@@ -29890,9 +29891,9 @@ Russia EU Poland China USA Argentina Japan Britain Canada 0 5 10 15 20 Central b
 <P>785 </P>
 
 <Table>
-
+<Caption>
 <P id="LinkTarget_16599">Chapter 11 Protection (American) </P>
-
+</Caption>
 
 <TR>
 <TH>Carved in Stone </TH>
@@ -30472,9 +30473,9 @@ Collateral assets </Figure>
 
 <ImageData src=""/>
 Nonfinancial (right scale)  Financial (left scale)  Asset-backed (left scale) 
-
+<Caption>
 <P>2003 2004 2005 2006 2007 2008 </P>
-
+</Caption>
 </Figure>
 
 <P>290 250 210 170 130 90 </P>
@@ -32168,9 +32169,9 @@ Approaches to Credit Analysis </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Step B: Payment </P>
-
+</Caption>
 Protection seller makes payment only if a pre-defined “credit event” occurs; in the meantime, it receives a fee Corporate Borrower “Protection Buyer” “Protection Seller” “Reference Asset” Loan Promise: interest &amp; principal Premium Contingent obligation Net effect of default swap is equivalent to insurance for “event risk” of default. Borrower in Default Payment shortfall Notice of “trigger” Payment </Figure>
 
 <P id="LinkTarget_16648">Credit Default Swap (Speculative Instrument) </P>
@@ -32790,9 +32791,9 @@ Total Return </P>
 
 <ImageData src=""/>
 = USA: protection purchased = USA: protection sold = Global 
-
+<Caption>
 <P>1997 98 99 2000 01 02 </P>
-
+</Caption>
 </Figure>
 
 <P>Sources: Industry sources &amp; “The Economist”, 16 August 2003, p. 52 </P>
@@ -33308,9 +33309,9 @@ Inability to receive repayment com-ing from normal course, ongoing operations in
 
 <ImageData src=""/>
 ?? Grant credit Deny credit 
-
+<Caption>
 <P>Action: liquidate shrink stable grow expand </P>
-
+</Caption>
 </Figure>
 
 <P>Strenght </P>
@@ -33904,13 +33905,13 @@ Default </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>AAA 0.001 0.10 AA+ 0.01 <Figure>
 
 <ImageData src=""/>
 % </Figure>
 1.68 AA 0.04 8.16 AA-0.05 </P>
-
+</Caption>
 </Figure>
 
 <P>2005 06 07 08 0910 </P>
@@ -34238,9 +34239,9 @@ Comercial paper </P>
 <P>Bank loans</P>
 
 <P>10 0 1960 1970 1980 1990 1992 </P>
+</Div>
 
-
-
+<Div>
 <P>Sources: First Manhattan Consulting Group Sources: Federal Reserve Flow of Funds </P>
 
 <P>Diversification (Loan Portfolio)•
@@ -35048,9 +35049,9 @@ Scotiabank Efficiency Ratios Year 2008 2007 2006 Financial Income $11,246 $12,22
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>2006 2007 2008 2009 2010 </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -36934,9 +36935,9 @@ Unsustainable debt load in the long run; vs. OK as temporary bridge </P>
 
 <ImageData src=""/>
 Change in loans of credit institutions (CI) to non-Cls minus change in deposits of Cls from non-Cls between 2004–2008 as % of 2004 GNP. 
-
+<Caption>
 <P>-4 -3 -2 -1 0 +1 +2+3+4+5 </P>
-
+</Caption>
 </Figure>
 
 <P>Eurozone sectoral balances Net lending by cestor (% of GDP) </P>
@@ -38108,9 +38109,9 @@ Analysts forecasts a big rebound in Lehman shares </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Nov’07 Feb’08 Apr’08 Jul’08 </P>
-
+</Caption>
 </Figure>
 
 <P>Overnight dollar LIBOR rate </P>
@@ -38630,9 +38631,9 @@ London Approach </Figure>
 
 <ImageData src=""/>
 Failures of commercial banks covered by the Federal Deposit Insurance Corporation 
-
+<Caption>
 <P>1935 1940 1945 1950 1955 1960 1965 1970 1975 1980 1985 1990 1995 2000 </P>
-
+</Caption>
 </Figure>
 
 <P>Source: FDIC Historical Statistics on Banking </P>
@@ -39240,9 +39241,9 @@ Cash Reserves Overnight Deposits Liquit Securities Wholesale Money Market Demand
 <TD>Equity: 10% x infinity </TD>
 </TR>
 
-
+<Caption>
 <P>Average: 1.1 years Average: 1.1 years </P>
-
+</Caption>
 </Table>
 
 <P>Mismatch: 0 years </P>
@@ -39568,9 +39569,9 @@ Migration: Average 5 Year Transition Matrix (%): 2002 for S&amp;P Rated Bonds To
 
 <ImageData src=""/>
 Averange length of credit ratings in years: USA 
-
+<Caption>
 <P>Aaa Aa ABaa Ba B Caa </P>
-
+</Caption>
 </Figure>
 <Figure>
 
@@ -39626,9 +39627,9 @@ Rating </Figure>
 <P>financial advice Flexible </P>
 
 <P>frontline staff High pressure </P>
+</Div>
 
-
-
+<Div>
 <P>sales tactics Unfriendly</P>
 
 <P>frontline staff No explanation for </P>
@@ -39864,7 +39865,7 @@ Money laundering </Figure>
 <P><Figure id="LinkTarget_16809" ActualText="1054 ">
 
 <ImageData src=""/>
-</Figure>
+1054 </Figure>
 Morgan, John Pierpont (banking history) Morgan, John Pierpont (banking history)</P>
 
 <P>• 
@@ -39876,9 +39877,9 @@ Morgan, John Pierpont (banking history) Morgan, John Pierpont (banking history)<
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Source: Wikipedia </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -39904,9 +39905,9 @@ Morgan, John Pierpont (banking history) Morgan, John Pierpont (banking history)<
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Source: Wikipedia </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -40724,11 +40725,11 @@ The Lending Decision </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Source: 
 <Link>www.myartprints.co.uk </Link>
 </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -41982,13 +41983,13 @@ Recovery (%) is largely a function of the type of security The Story </Figure>
 
 <ImageData src=""/>
 UK/ Europe 22 North America 57 Asia 15 
-
+<Caption>
 <P>Middle East 2 2008 09 10 11 </P>
 
 <P>* Over 24 calendar months </P>
 
 <P>Source: Thomson Reuters governance, risk and compliance unit Financial Group Hit by Flood of New Rules in the “Financial Times”, 9 December 2011 </P>
-
+</Caption>
 </Figure>
 <Figure>
 
@@ -42166,9 +42167,9 @@ UK/ Europe 22 North America 57 Asia 15
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>Loans 40 x 100% = .40 </P>
-
+</Caption>
 Minimum Capital Minimum equity as % of assets based on equity = 8% of RWA exposure </Figure>
 
 <Table>
@@ -42636,9 +42637,9 @@ Promise to Purchase $ </Figure>
 
 <ImageData src=""/>
 Private-Label Fannie Mae and Freddie Mac Ginnie Mae 
-
+<Caption>
 <P>1990 1993 1996 1999 2002 2005 2008 </P>
-
+</Caption>
 </Figure>
 
 <P>Resolution Authority (of Failed Banks) • 
@@ -42726,9 +42727,9 @@ Private-Label Fannie Mae and Freddie Mac Ginnie Mae
 
 <ImageData src=""/>
 Average ? ? ? Credit granted Credit denied 
-
+<Caption>
 <P>liquidate  withdraw  support  promote </P>
-
+</Caption>
 </Figure>
 
 <P>uncertainty; negotiable; some offset by o/s collateral </P>
@@ -42824,9 +42825,9 @@ Markit Indeks Europe crossover index eurozone banks index </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>2004 0506 07 080910 11* </P>
-
+</Caption>
 </Figure>
 
 <Table>
@@ -44926,9 +44927,9 @@ Small Business Loans </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>1997 1998 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 </P>
-
+</Caption>
 </Figure>
 
 <P>Note: Credit card specialists identified each year as those institutions with at least 99 percent of reported loans under $100,000 and the average loan amount at under $15,000 </P>
@@ -45182,9 +45183,9 @@ Small Business Loans </Figure>
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>1901–1920 1921–1940 1941–1950 1961–1980 1981–1990 1991–2004 </P>
-
+</Caption>
 </Figure>
 
 <P>Special Investment Vehicles (SIV) a.k.a. “Conduits”•
@@ -46072,9 +46073,9 @@ Breakout in Aug 07: Warning Signal of Systemic Risk High on 10/10/08: 459 basis 
 
 <ImageData src=""/>
 $ = Outstanding principal Maturity = full repayment repayment 
-
+<Caption>
 <P>0 123 45 </P>
-
+</Caption>
 </Figure>
 
 <P>$ </P>
@@ -46694,9 +46695,9 @@ BEF: Top Ten Polish Banks* Year RoE Leverage RoA EA Ratio RoEA 2002 6.8% ÷ 9.0 
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>JFMAMJ JAS ONDJ FMAMJ JA 2010 2011 </P>
-
+</Caption>
 </Figure>
 
 <P>MSCI Europe EMSC Europe (Banks) </P>
@@ -47508,9 +47509,9 @@ $ Sustainable level of debt based on a coverage margin Gradual application of a 
 
 <ImageData src=""/>
 
-
+<Caption>
 <P>1950 1955 1960 1965 1970 1975 1980 1985 1990 1995 2000 </P>
-
+</Caption>
 </Figure>
 
 <P>Source: FDIC Historical Statistics on Banking </P>
@@ -47526,9 +47527,9 @@ $ Sustainable level of debt based on a coverage margin Gradual application of a 
 
 <ImageData src=""/>
 Japanese banks’ non-performing loans 
-
+<Caption>
 <P>1999 2000 01 02 03 04 05 06 </P>
-
+</Caption>
 </Figure>
 
 <P>¥ tm </P>
@@ -50556,7 +50557,7 @@ Just What is a Bank? </Figure>
 </P>
 
 
-
-
+</Div>
+</Sect>
 </Part>
 </TaggedPDF-doc>

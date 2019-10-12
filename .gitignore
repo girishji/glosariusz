@@ -1,9 +1,9 @@
 parser/*.class
 parser/bak
-dictionary.js
 .DS_Store
 splitpdf
 parser/frags
+www/frags
 */.DS_Store
 */*/.DS_Store
 */*/*/.DS_Store
