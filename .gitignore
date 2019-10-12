@@ -3,6 +3,7 @@ parser/bak
 dictionary.js
 .DS_Store
 splitpdf
+parser/frags
 */.DS_Store
 */*/.DS_Store
 */*/*/.DS_Store

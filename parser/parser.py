@@ -4,9 +4,11 @@
 # XML parser of PDF files - Girish Palya
 
 import xml.etree.ElementTree as ET
-from xml.dom.minidom import parseString
+#from xml.dom.minidom import parseString
 import re
 import sys
+import md5
+import os.path
 
 ############################################################
 
@@ -28,6 +30,7 @@ def parse(filename):
     
     # Make fragments and write to files
     fragment(ranking, element_list)
+    write_tokens(tokens.keys())
 
 ############################################################
 
@@ -69,7 +72,7 @@ def fragment(ranking, elements):
         frag = init_frag(token, text)
         for index in range(begin + 1, end):
             frag.append(elements[index])
-        write_frag(frag)
+        write_frag(frag, token)
 
 ############################################################
 
@@ -233,10 +236,33 @@ def prefix(filename):
 
 ############################################################
 
-def write_frag(frag):
-    rough_string = ET.tostring(frag, encoding='utf-8')
-    reparsed = parseString(rough_string)
-    print(reparsed.toprettyxml(indent="    "))
+def write_tokens(tokens):
+    frag = ET.Element('tokens')
+    for token in tokens:
+        child = ET.SubElement(frag, 'token')
+        child.text = token
+        
+    ET.ElementTree(frag).write(dirname + '/' + prefix(filename) + '.xml', \
+                               encoding='utf-8', xml_declaration = True)
+    
+############################################################
+
+def write_frag(frag, token):
+    #rough_string = ET.tostring(frag, encoding='utf-8')
+    #reparsed = parseString(rough_string)
+    #prettystr = reparsed.toprettyxml(indent="    ")
+
+    fname = md5.new(token).hexdigest()
+    fname = fname[21:]
+    fpath = dirname + '/' + fname
+    if os.path.isfile(fpath):
+        sys.exit('error:', fname, 'exists')
+    with open(fpath, 'wb') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="' + prefix(filename)
+                + '.xsl" type="text/xsl"?>'.encode('utf8'))
+        ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
+    f.closed
+    
     # Replace sys.stdout with a file object pointing to your object file:
     #if 0:
     #    etree.ElementTree(frag).write(sys.stdout, encoding='utf-8', xml_declaration = True,
@@ -246,6 +272,9 @@ def write_frag(frag):
         
 ############################################################
 
+dirname = 'frags'
+if (not os.path.isdir(dirname)) or len(os.listdir(dirname)) != 0:
+    sys.exit(dirname, 'does not exist or is not empty')
 filename = sys.argv[1]
 parse(filename)
 
