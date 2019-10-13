@@ -9,6 +9,7 @@
 // https://stackoverflow.com/questions/4069982/document-getelementbyid-vs-jquery
 // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
 // https://getbootstrap.com/docs/3.4/javascript/
+// https://stackoverflow.com/questions/19220873/how-to-read-xml-file-contents-in-jquery-and-display-in-html-elements
 
 // XXX
 var dictionary = [
@@ -25,8 +26,6 @@ var list = Array.from(dictMap.keys());
 let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
 let content = document.getElementById("myContent");
-
-readlist('../frags/ba/bankowosc.xml');
 
 var filteredList = [];
 var maxDisplayLimit = 100;
@@ -58,6 +57,19 @@ $('#myDropdownMenu').on('click', '.dropdown-item', function() {
     $('.dropdown-toggle').dropdown('toggle');
 })
 
+$(document).ready(function(){
+    $.ajax({
+        type: "GET" ,
+        url: "frags/ba/bankowosc.xml" ,
+        dataType: "xml" ,
+        success: function(xml) {
+            $(xml).find('tk').each(function(){
+                //$("#temp").append('<li>' + $(this).text() + '</li>');
+            });
+        }
+    });
+});
+
 function addContent(url) {
     content.innerHTML = '<iframe class="embed-responsive-item" src="' + url + '"></iframe>';
 
@@ -77,15 +89,6 @@ function addContent(url) {
     //    $('#myPDFLink').attr("href", pdf)
 }
 
-function readList(filename) {
-    var reader = new FileReader();
-    reader.onload = function() {
-        var parsed = new DOMParser().parseFromString(this.result, "text/xml");
-        console.log(parsed);
-    };
-    reader.readAsText(filename);
-
-}
 
 function generateListItem(item) {
     var anchor = document.createElement('a');

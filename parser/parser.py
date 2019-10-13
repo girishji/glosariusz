@@ -190,26 +190,35 @@ def read_bookmarks(root):
         if prefix(filename) == 'bankowosc':
             partition = bm.partition(u'–')
             if partition[1]:
-                tokens[partition[0].rstrip()] = bm
+                tokens = insert_token(tokens, partition[0].rstrip(), bm)
             else:
                 # deal with 2 exceptions
                 partition = bm.partition('-')
                 if partition[1]:
-                    tokens[partition[0].rstrip()] = bm
+                    tokens = insert_token(tokens, partition[0].rstrip(), bm)
                 else:
                     partition = bm.rpartition(u'•')
-                    tokens[partition[0].rstrip()] = bm
+                    tokens = insert_token(tokens, partition[0].rstrip(), bm)
         else:                    
             # rachunkowosc and finanse
             partition = bm.rpartition(u'•')
             if partition[1]:
-                tokens[partition[0].rstrip()] = bm
+                tokens = insert_token(tokens, partition[0].rstrip(), bm)
             else:
-                tokens[bm.rstrip('.')] = bm
+                tokens = insert_token(tokens, bm.rstrip('.'), bm)
     # remove empty elements
     for k in tokens.keys():
         if k is None or k == '':
             tokens.pop(k, None)
+    return tokens
+
+############################################################
+
+def insert_token(tokens, tstring, bm):
+    if tstring in tokens:
+        #sys.exit(tstring + ' already exists')
+        print(tstring + ' already exists')
+    tokens[tstring] = bm
     return tokens
 
 ############################################################
