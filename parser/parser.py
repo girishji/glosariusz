@@ -245,23 +245,40 @@ def prefix(filename):
 def write_tokens(tokens):
     frag = ET.Element('tokens')
     for token in tokens:
-        child = ET.SubElement(frag, 'tk')
-        child.text = token
+        child = ET.SubElement(frag, 'tk', fn=get_filename(token))
+        # after computing md5 sum remove
+        child.text = clean_token(token)
         
     ET.ElementTree(frag).write(dbase + '/' + prefix(filename) + '.xml', \
                                encoding='utf-8', xml_declaration = True)
     
 ############################################################
 
+def get_filename(token):
+    c_token = clean_token(token)
+    fname = md5.new(c_token.encode('utf8')).hexdigest()
+    return fname[21:]
+
+
+############################################################
+
+def clean_token(token):
+    s = token
+    s = s.replace(u'\xa0', u' ')
+    s = s.replace(u'\u202f', u' ')
+    s = s.replace(u'&', u' ')
+    return s
+
+############################################################
+
 def write_frag(frag, token):
-    fname = md5.new(token.encode('utf8')).hexdigest()
-    fname = fname[21:]
+    fname = get_filename(token)
     fpath = dirname + '/' + fname + '.xml'
     if os.path.isfile(fpath):
         # XXX ignore this error for now, tokens with + or ? or ▶ are
         #     misreported during comparison (I think)
         #sys.exit('error: ' + fname + ' exists, ' + token)
-        print('error: ' + fname + ' exists, ' + token + 'irnored for now XXX')
+        print('error: ' + fname + ' exists, ' + token + ' : ignored for now XXX')
         return
     with open(fpath, 'wb') as f:
         f.write('<?xml version="1.0" encoding="UTF-8" ?>\n'

@@ -10,12 +10,10 @@
 // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
 // https://getbootstrap.com/docs/3.4/javascript/
 // https://stackoverflow.com/questions/19220873/how-to-read-xml-file-contents-in-jquery-and-display-in-html-elements
-//https://www.sitepoint.com/use-jquerys-ajax-function/
+// https://www.sitepoint.com/use-jquerys-ajax-function/
 
+var dictMap = new Map();
 var list = [];
-var ba_list = [];
-var ra_list = [];
-var fi_list = [];
 
 let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
@@ -39,19 +37,21 @@ $('#myDropdown').on('shown.bs.dropdown', function () {
 
 //If the user clicks on any item, get the text of the item and set content
 $('#myDropdownMenu').on('click', '.dropdown-item', function() {
-    
+
     let key = $(this).html();
-    let hash = hex_md5(key);
-    let fname = hash.substring(21);
-    console.log(fname);
-    addContent('frags/' + fname + '.xml');
+    console.log(key);
+    if (dictMap.has(key)) {
+        url = 'frags/' + dictMap.get(key) + '.xml';
+        addContent(url);
+        console.log('file: ' + dictMap.get(key) + '.xml');
+    }
     $('.dropdown-toggle').dropdown('toggle');
 })
 
 $(document).ready(function() {
-    readList("frags/rachunkowosc.xml", ra_list);
-    readList("frags/finanse.xml", fi_list);
-    readList("frags/bankowosc.xml", ba_list);
+    readList("frags/rachunkowosc.xml");
+    readList("frags/finanse.xml");
+    readList("frags/bankowosc.xml");
 
     // The jQuery $.ajax() function is used to perform an asynchronous HTTP request.
     function readList(url, tlist) {
@@ -62,7 +62,8 @@ $(document).ready(function() {
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('tk').each(function(){
-                    tlist.push($(this).text());
+                    dictMap.set($(this).text(), $(this).attr('fn'));
+                    //console.log($(this).text());
                 });
             }
         });
@@ -75,25 +76,8 @@ $(window).on('load', function() {
     // page is fully loaded, including all frames, objects and images
     //alert("window is loaded");
 
-    allitems = [];
-    ra_list.forEach(function(item, index, array) {
-        allitems.push(item);
-        //console.log(item, index);
-    });
-    ba_list.forEach(function(item, index, array) {
-        allitems.push(item);
-    });
-    fi_list.forEach(function(item, index, array) {
-        allitems.push(item);
-    });
-
-    allitems.sort();
-    //console.log(allitems.length);
-    // remove duplicates
-    list = allitems.filter(function(value, index, self) {
-        return self.indexOf(value) === index;
-    });
-    //console.log(list.length);
+    list = Array.from(dictMap.keys());
+    console.log(list.length);
 
 });
 

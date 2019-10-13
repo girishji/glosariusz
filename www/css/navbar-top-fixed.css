@@ -9,6 +9,14 @@ body {
     margin: 0px;
 }
 
+.navbar {
+    padding: 0.3rem 1rem;
+}
+
+.navbar-brand {
+    line-height: 1.3rem;
+}
+
 .dropdown-menu {
     max-height: 20rem; /* height of dropdown */
     overflow-y: auto; /* makes it scrollable */
