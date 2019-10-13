@@ -1,4 +1,15 @@
 
+--
+
+GAE
+
+to run webserver:
+dev_appserver.py app.yaml
+
+https://cloud.google.com/appengine/docs/standard/python/quickstart
+
+--
+
 * run the script to remove <Sect> and <Div> elements, since they randomly divide the document; much easier to find all children
   in the same level
 * Removed a few paragraphs from all xml files in resources/xml as it contained author data and some malformed data
