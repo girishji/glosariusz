@@ -30,8 +30,8 @@ def parse(filename):
     process_orphans(tokens, ranking)
     
     # Make fragments and write to files
-    #fragment(ranking, element_list)
-    #write_tokens(tokens.keys())
+    fragment(ranking, element_list)
+    write_tokens(tokens.keys())
 
 ############################################################
 
