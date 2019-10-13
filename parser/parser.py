@@ -257,8 +257,9 @@ def write_frag(frag, token):
     if os.path.isfile(fpath):
         sys.exit('error:', fname, 'exists')
     with open(fpath, 'wb') as f:
-        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
-                + '.xsl" type="text/xsl"?>'.encode('utf8'))
+        f.write('<?xml version="1.0" encoding="UTF-8" ?>\n'
+                + '<?xml-stylesheet href="../xsl/glosariusz.xsl" '
+                + 'type="text/xsl"?>\n'.encode('utf8'))
         ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
     f.closed
     
@@ -272,7 +273,7 @@ def write_frag(frag, token):
 ############################################################
 
 def get_dirname():
-    dname = 'frags'
+    dname = '../www/frags'
     dirname = dname + '/' + prefix(filename)[:2]
     if not os.path.exists(dirname):
         os.makedirs(dirname)
