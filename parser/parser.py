@@ -4,7 +4,6 @@
 # XML parser of PDF files - Girish Palya
 
 import xml.etree.ElementTree as ET
-#from xml.dom.minidom import parseString
 import re
 import sys
 import md5
@@ -66,7 +65,7 @@ def fragment(ranking, elements):
                 text = text + ''.join(elements[begin + 1].itertext())
                 begin = begin + 1
                 if not starts_with(text, token):
-                    sys.exit('error: ', token, 'not found')
+                    sys.exit('error: ' + token + ' not found')
 
         frag = init_frag(token, text)
         for index in range(begin + 1, end):
@@ -247,15 +246,12 @@ def write_tokens(tokens):
 ############################################################
 
 def write_frag(frag, token):
-    #rough_string = ET.tostring(frag, encoding='utf-8')
-    #reparsed = parseString(rough_string)
-    #prettystr = reparsed.toprettyxml(indent="    ")
-
     fname = md5.new(token.encode('utf8')).hexdigest()
     fname = fname[21:]
     fpath = dirname + '/' + fname + '.xml'
+    print(fpath, 'for token', token)
     if os.path.isfile(fpath):
-        sys.exit('error:', fname, 'exists')
+        sys.exit('error: ' + fname + ' exists')
     with open(fpath, 'wb') as f:
         f.write('<?xml version="1.0" encoding="UTF-8" ?>\n'
                 + '<?xml-stylesheet href="../xsl/glosariusz.xsl" '
@@ -263,12 +259,6 @@ def write_frag(frag, token):
         ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
     f.closed
     
-    # Replace sys.stdout with a file object pointing to your object file:
-    #if 0:
-    #    etree.ElementTree(frag).write(sys.stdout, encoding='utf-8', xml_declaration = True,
-    #                                  pretty_print = True,
-    #                                  doctype='<?xml-stylesheet href="' + prefix(filename)
-    #                                  + '.xsl" type="text/xsl"?>')
         
 ############################################################
 

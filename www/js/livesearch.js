@@ -26,6 +26,8 @@ let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
 let content = document.getElementById("myContent");
 
+readlist('../frags/ba/bankowosc.xml');
+
 var filteredList = [];
 var maxDisplayLimit = 100;
 
@@ -50,7 +52,7 @@ $('#myDropdownMenu').on('click', '.dropdown-item', function() {
         url = dictMap.get(key);
         //addContent(url);
         // XXX
-        addContent('frags/578e22d7d56.xml');
+        //addContent('frags/578e22d7d56.xml');
 
     }
     $('.dropdown-toggle').dropdown('toggle');
@@ -73,6 +75,16 @@ function addContent(url) {
     //        
     //    var pdf = words[0] + "/" + words[0] + "_Part" + pdfNum + ".pdf";
     //    $('#myPDFLink').attr("href", pdf)
+}
+
+function readList(filename) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var parsed = new DOMParser().parseFromString(this.result, "text/xml");
+        console.log(parsed);
+    };
+    reader.readAsText(filename);
+
 }
 
 function generateListItem(item) {
