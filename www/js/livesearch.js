@@ -39,11 +39,11 @@ $('#myDropdown').on('shown.bs.dropdown', function () {
 $('#myDropdownMenu').on('click', '.dropdown-item', function() {
 
     let key = $(this).html();
-    console.log(key);
+    //console.log(key);
     if (dictMap.has(key)) {
         url = 'frags/' + dictMap.get(key) + '.xml';
         addContent(url);
-        console.log('file: ' + dictMap.get(key) + '.xml');
+        //console.log('file: ' + dictMap.get(key) + '.xml');
     }
     $('.dropdown-toggle').dropdown('toggle');
 })
@@ -77,7 +77,7 @@ $(window).on('load', function() {
     //alert("window is loaded");
 
     list = Array.from(dictMap.keys());
-    console.log(list.length);
+    //console.log(list.length);
 
 });
 
