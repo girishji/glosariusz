@@ -9,6 +9,7 @@ import re
 import sys
 import md5
 import os.path
+import os
 
 ############################################################
 
@@ -51,8 +52,6 @@ def fragment(ranking, elements):
     keys = ranking.keys()
     keys.sort()
     for i, key in enumerate(keys):
-        if i == 3:
-            break
         token = ranking[key]
         begin, end = key, len(elements) - 1
         if i < (len(keys) - 1):
@@ -253,15 +252,15 @@ def write_frag(frag, token):
     #prettystr = reparsed.toprettyxml(indent="    ")
 
     fname = md5.new(token.encode('utf8')).hexdigest()
-    #fname = fname[21:]
-    #fpath = dirname + '/' + fname + '.xml'
-    #if os.path.isfile(fpath):
-    #    sys.exit('error:', fname, 'exists')
-    #with open(fpath, 'wb') as f:
-    #    f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
-    #            + '.xsl" type="text/xsl"?>'.encode('utf8'))
-    #    ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
-    #f.closed
+    fname = fname[21:]
+    fpath = dirname + '/' + fname + '.xml'
+    if os.path.isfile(fpath):
+        sys.exit('error:', fname, 'exists')
+    with open(fpath, 'wb') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
+                + '.xsl" type="text/xsl"?>'.encode('utf8'))
+        ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
+    f.closed
     
     # Replace sys.stdout with a file object pointing to your object file:
     #if 0:
@@ -272,10 +271,27 @@ def write_frag(frag, token):
         
 ############################################################
 
-# dirname = '../www/frags'
-# if (not os.path.isdir(dirname)) or len(os.listdir(dirname)) != 0:
-#     sys.exit(dirname, 'does not exist or is not empty')
+def get_dirname():
+    dname = 'frags'
+    dirname = dname + '/' + prefix(filename)[:2]
+    if not os.path.exists(dirname):
+        os.makedirs(dirname)
+    else:
+        # remove all files
+        for the_file in os.listdir(dirname):
+            file_path = os.path.join(dirname, the_file)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                print(e)
+
+    return dirname
+
+############################################################
+
 filename = sys.argv[1]
+dirname = get_dirname()
 parse(filename)
 
 
