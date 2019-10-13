@@ -248,7 +248,7 @@ def write_tokens(tokens):
         child = ET.SubElement(frag, 'tk')
         child.text = token
         
-    ET.ElementTree(frag).write(dirname + '/' + prefix(filename) + '.xml', \
+    ET.ElementTree(frag).write(dbase + '/' + prefix(filename) + '.xml', \
                                encoding='utf-8', xml_declaration = True)
     
 ############################################################
@@ -258,9 +258,10 @@ def write_frag(frag, token):
     fname = fname[21:]
     fpath = dirname + '/' + fname + '.xml'
     if os.path.isfile(fpath):
-        # XXX
+        # XXX ignore this error for now, tokens with + or ? or ▶ are
+        #     misreported during comparison (I think)
         #sys.exit('error: ' + fname + ' exists, ' + token)
-        print('error: ' + fname + ' exists, ' + token)
+        print('error: ' + fname + ' exists, ' + token + 'irnored for now XXX')
         return
     with open(fpath, 'wb') as f:
         f.write('<?xml version="1.0" encoding="UTF-8" ?>\n'
@@ -272,8 +273,7 @@ def write_frag(frag, token):
         
 ############################################################
 
-def get_dirname():
-    dname = '../www/frags'
+def get_dirname(dname):
     dirname = dname + '/' + prefix(filename)[:2]
     if not os.path.exists(dirname):
         os.makedirs(dirname)
@@ -292,9 +292,7 @@ def get_dirname():
 ############################################################
 
 filename = sys.argv[1]
-dirname = get_dirname()
+print(filename)
+dbase = 'frags'
+dirname = get_dirname(dbase)
 parse(filename)
-
-
-
-            

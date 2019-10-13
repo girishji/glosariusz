@@ -10,19 +10,9 @@
 // https://stackoverflow.com/questions/4772774/how-do-i-create-a-link-using-javascript/4772817
 // https://getbootstrap.com/docs/3.4/javascript/
 // https://stackoverflow.com/questions/19220873/how-to-read-xml-file-contents-in-jquery-and-display-in-html-elements
+//https://www.sitepoint.com/use-jquerys-ajax-function/
 
-// XXX
-var dictionary = [
-    [ '(Accounting) Standard-setters • Organy ustanawiające standardy rachunkowości', 'Glosariusz_SPPW_-Rachunkowosc/part1186.htm' ],
-    [ '(International) Public Interest Oversight Board • PIOB • (Międzynarodowa) Rada ds. Ochrony Interesu Publicznego', 'Glosariusz_SPPW_-Rachunkowosc/part1797.htm' ],
-    [ '(Międzynarodowa) Rada ds. Ochrony Interesu Publicznego • (International) Public Interest Oversight Board • PIOB', 'Glosariusz_SPPW_-Rachunkowosc/part423.htm' ],
-    [ '(The) Hundred Group • Grupa Stu', 'Glosariusz_SPPW_-_Finanse/part1647.htm' ],
-    [ '(The) Monitoring Group (of Public Interest Oversight Board) • Zespół Monitorujący (Rady ds. Ochrony Interesu Publicznego)', 'Glosariusz_SPPW_-Rachunkowosc/part1886.htm' ],
-];
-
-var dictMap = new Map(dictionary);
-var list = Array.from(dictMap.keys());
-
+var list = [];
 var ba_list = [];
 var ra_list = [];
 var fi_list = [];
@@ -51,53 +41,65 @@ $('#myDropdown').on('shown.bs.dropdown', function () {
 $('#myDropdownMenu').on('click', '.dropdown-item', function() {
     
     let key = $(this).html();
-    if (dictMap.has(key)) {
-        url = dictMap.get(key);
-        //addContent(url);
-        // XXX
-        //addContent('frags/578e22d7d56.xml');
-
-    }
+    let hash = hex_md5(key);
+    let fname = hash.substring(21);
+    console.log(fname);
+    addContent('frags/' + fname + '.xml');
     $('.dropdown-toggle').dropdown('toggle');
 })
 
-$(document).ready(function(){
-    readList("frags/ba/bankowosc.xml", ba_list);
+$(document).ready(function() {
+    readList("frags/rachunkowosc.xml", ra_list);
+    readList("frags/finanse.xml", fi_list);
+    readList("frags/bankowosc.xml", ba_list);
 
+    // The jQuery $.ajax() function is used to perform an asynchronous HTTP request.
     function readList(url, tlist) {
         $.ajax({
             type: "GET",
             url: url,
+            async: false,
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('tk').each(function(){
                     tlist.push($(this).text());
-                    console.log($(this).text());
-                    var hash = hex_md5($(this).text());
-                    console.log(hash);
                 });
             }
         });
     }
 });
 
+
+// jquery calls window.load after document.ready
+$(window).on('load', function() {
+    // page is fully loaded, including all frames, objects and images
+    //alert("window is loaded");
+
+    allitems = [];
+    ra_list.forEach(function(item, index, array) {
+        allitems.push(item);
+        //console.log(item, index);
+    });
+    ba_list.forEach(function(item, index, array) {
+        allitems.push(item);
+    });
+    fi_list.forEach(function(item, index, array) {
+        allitems.push(item);
+    });
+
+    allitems.sort();
+    //console.log(allitems.length);
+    // remove duplicates
+    list = allitems.filter(function(value, index, self) {
+        return self.indexOf(value) === index;
+    });
+    //console.log(list.length);
+
+});
+
 function addContent(url) {
     content.innerHTML = '<iframe class="embed-responsive-item" src="' + url + '"></iframe>';
 
-    //var words = url.split('/');
-    //if (words.length === 2) {
-    //    var prefix = words[1].substring(4, words[1].length); // remove 'part'
-    //    var fileNum = parseInt(prefix, 10);
-    //    console.log(fileNum);
-    //    var pdfNum = fileNum;
-    //    if (words[0] === "Glosariusz_SPPW_-_Finanse") {
-    //    } else if (words[0] === "Glosariusz_SPPW_-_Bankowosc") {
-    //
-    //    } else {
-    //    }
-    //        
-    //    var pdf = words[0] + "/" + words[0] + "_Part" + pdfNum + ".pdf";
-    //    $('#myPDFLink').attr("href", pdf)
 }
 
 
