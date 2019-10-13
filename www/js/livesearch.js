@@ -23,6 +23,10 @@ var dictionary = [
 var dictMap = new Map(dictionary);
 var list = Array.from(dictMap.keys());
 
+var ba_list = [];
+var ra_list = [];
+var fi_list = [];
+
 let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
 let content = document.getElementById("myContent");
@@ -58,16 +62,23 @@ $('#myDropdownMenu').on('click', '.dropdown-item', function() {
 })
 
 $(document).ready(function(){
-    $.ajax({
-        type: "GET" ,
-        url: "frags/ba/bankowosc.xml" ,
-        dataType: "xml" ,
-        success: function(xml) {
-            $(xml).find('tk').each(function(){
-                //$("#temp").append('<li>' + $(this).text() + '</li>');
-            });
-        }
-    });
+    readList("frags/ba/bankowosc.xml", ba_list);
+
+    function readList(url, tlist) {
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: "xml",
+            success: function(xml) {
+                $(xml).find('tk').each(function(){
+                    tlist.push($(this).text());
+                    console.log($(this).text());
+                    var hash = hex_md5($(this).text());
+                    console.log(hash);
+                });
+            }
+        });
+    }
 });
 
 function addContent(url) {

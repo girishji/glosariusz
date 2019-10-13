@@ -1130,7 +1130,7 @@ W Europie pierwsi tę nowinkę wypróbowali Szwedzi. W 1656 r. Johan Palmstruch 
 <bookmark title="Pieniądze trzymane pod materacem (slang) • Mattress Money (slang) – gotówka gromadzona poza systemem finansowym z powodu braku zaufania do instytucji finansowych lub do lokalnej waluty. Szacuje się, że w czasach komunizmu w Związku Radzieckim trzymano „po">
 <destination structID="LinkTarget_16319"/>
 </bookmark>
-<bookmark title="PIGS (slang) • PIGS (slang) – niezbyt pochlebne określenie kilku państw europejskich narażonych na bankructwo z powodu słabości finansów publicznych: Portugalii, Włoch (ang. Italy), Grecji i Hiszpanii (ang. Spain). Inna propozycja dla litery „I” to Irland">
+<bookmark title="PIGS (slang) • PIGS (slang) (E) – niezbyt pochlebne określenie kilku państw europejskich narażonych na bankructwo z powodu słabości finansów publicznych: Portugalii, Włoch (ang. Italy), Grecji i Hiszpanii (ang. Spain). Inna propozycja dla litery „I” to Irland">
 <destination structID="LinkTarget_16319"/>
 </bookmark>
 <bookmark title="Plan spłaty • Repayment Plan – dające się zidentyfikować źródło przyszłych przepływów pieniężnych, które można wykorzystać do obsługi długu (części głównej i odsetek). Ustalenie planu spłat stanowi niezbędny warunek udzielenia ewentualnego finansowania. D">
@@ -2206,7 +2206,7 @@ a bank”. If there is c">
 <bookmark title="Behavioural Credit Scoring • Ocena zdolności kredytowej oparta na analizie behawioralnej  – A retail credit appraisal technique that uses daily transaction data to categorise large individual customer segments by their credit behaviour and habits. It is d">
 <destination structID="LinkTarget_16582"/>
 </bookmark>
-<bookmark title="BIC – Bank/Business Identification Code (a.k.a. “Swift Codes”) • BIC (adres BIC, kod identyfikacyjny banku albo: kod SWIFT) – 
+<bookmark title="BIC • Bank/Business Identification Code (a.k.a. “Swift Codes”) • BIC (adres BIC, kod identyfikacyjny banku albo: kod SWIFT) –
 A code that is used in automated processing when transferring money between banks, particularly for international wire transfers">
 <destination structID="LinkTarget_16582"/>
 </bookmark>
@@ -3049,7 +3049,7 @@ A metric of the stability of a commercial bank’s funding sources and in turn i
 <bookmark title="Long Term Capital Management (LTCM) &amp; Banking • Long Term Capital Management (LTCM) a bankowość – LTCM was a highly sophisticated hedge fund that was caught off guard in 1998 with the Russian government’s unexpected default (although the fund was not dire">
 <destination structID="LinkTarget_16782"/>
 </bookmark>
-<bookmark title="Made According to Instructions (MAI – pronounced “My”) Valuations • Wyceny „sporządzone zgodnie z instrukcją” – Banker’s slang for asset or real estate property valuations which are designed to produce a certain result, typically to qualify an asset as co">
+<bookmark title="Made According to Instructions (MAI : pronounced “My”) Valuations • Wyceny „sporządzone zgodnie z instrukcją” – Banker’s slang for asset or real estate property valuations which are designed to produce a certain result, typically to qualify an asset as co">
 <destination structID="LinkTarget_16783"/>
 </bookmark>
 <bookmark title="Maintenance Tests (vernacular) • Kryteria utrzymywania (potoczne) –
@@ -6403,7 +6403,7 @@ Bariera </Figure>
 Bezsporny tytuł </Figure>
 
 <P>BIC (adres BIC, kod identyfikacyjny banku albo: kod SWIFT) • 
-<Link>BIC – </Link>
+<Link>BIC • </Link>
 
 <Link>Bank/Business Identification Code (a.k.a. “Swift Codes”)</Link>
  – kod wykorzystywany przy automatycznym przetwarzaniu płatności przepływających z banku do banku, szczególnie ponad granicami państw, a także przy wymianie innego rodzaju informacji. Kod pojawia się niekiedy na wyciągu z rachunku bankowego. W sposób jednoznaczny umożliwia identyfikację konkretnej instytucji. Standard ISO 9362 Międzynarodowej Organizacji Normalizacyjnej określa elementy i strukturę adresu BIC. Zawiera on osiem (BIC8) lub jedenaście (BIC11) kolejnych znaków, które składają się na kod banku, kod kraju, kod lokalizacji, a czasami także kod oddziału. Rejestracją adresów BIC zajmuje się organizacja SWIFT. Kod identyfikacyjny Bank of Nova Scotia to NOSCCATTXXX. </P>
@@ -14595,7 +14595,7 @@ Może pomóc? </Figure>
 
 <P>PIGS (slang) • 
 <Link>PIGS </Link>
-(slang) – niezbyt pochlebne określenie kilku państw europejskich narażonych na bankructwo z powodu słabości finansów publicznych: Portugalii, Włoch (ang. Italy), Grecji i Hiszpanii (ang. Spain). Inna propozycja dla litery „I” to Irlandia. W odpowiedzi na kryzys finansowy, jaki ogarnął Grecję, w 2010 roku UE zdecydowała o stworzeniu ogromnego (750 mld euro) pakietu ratunkowego, który miał zapobiec niespłaceniu zobowiązań przez pań</P>
+(slang) (E) – niezbyt pochlebne określenie kilku państw europejskich narażonych na bankructwo z powodu słabości finansów publicznych: Portugalii, Włoch (ang. Italy), Grecji i Hiszpanii (ang. Spain). Inna propozycja dla litery „I” to Irlandia. W odpowiedzi na kryzys finansowy, jaki ogarnął Grecję, w 2010 roku UE zdecydowała o stworzeniu ogromnego (750 mld euro) pakietu ratunkowego, który miał zapobiec niespłaceniu zobowiązań przez pań</P>
 
 <P id="LinkTarget_16320">Platforma bankowej obsługi klienta </P>
 
@@ -38659,7 +38659,7 @@ Long Tail Risks </Figure>
 
 <P id="LinkTarget_16783">M </P>
 
-<P>Made According to Instructions (MAI – pronounced “My”) Valuations • 
+<P>Made According to Instructions (MAI : pronounced “My”) Valuations •
 <Link>Wyceny „sporządzone zgodnie z instrukcją” </Link>
 – Banker’s slang for asset or real estate property valuations which are designed to produce a certain result, typically to qualify an asset as collateral, instead of being based on impartial criteria. (It is a play on the acronym “MAI”, which stands for Member, Appraisal Institute, the designation of officially qualified appraisers). To be reliably useful, a valuation should have the following attributes: </P>
 

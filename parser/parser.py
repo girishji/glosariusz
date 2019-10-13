@@ -19,19 +19,19 @@ def parse(filename):
 
     # get a dictionary of token -> bookmark element
     tokens = read_bookmarks(root)
+    write_tokens(tokens.keys())
 
     # rank tokens based on position in document
     element_list = get_part(root)
     # print_all_tags(element_list)
     ranking = rank_tokens(tokens.keys(), element_list)
-    
+
+    # Make fragments and write to files
+    fragment(ranking, element_list)
+
     # write out orphan tokens
     process_orphans(tokens, ranking)
     
-    # Make fragments and write to files
-    fragment(ranking, element_list)
-    write_tokens(tokens.keys())
-
 ############################################################
 
 def print_all_tags(elements):
@@ -101,9 +101,9 @@ def filter_token(token, text):
             i += 1
             j += 1
 
-    if i == len(token) and j < len(text):
+    if i == len(token) and j <= len(text):
         return text[j:]        
-    sys.exit('token and text length mismatch')
+    sys.exit(token + ' :: ' + text + ' token and text length mismatch')
             
 ############################################################
 
@@ -216,8 +216,7 @@ def read_bookmarks(root):
 
 def insert_token(tokens, tstring, bm):
     if tstring in tokens:
-        #sys.exit(tstring + ' already exists')
-        print(tstring + ' already exists')
+        sys.exit(tstring + ' already exists')
     tokens[tstring] = bm
     return tokens
 
@@ -258,9 +257,11 @@ def write_frag(frag, token):
     fname = md5.new(token.encode('utf8')).hexdigest()
     fname = fname[21:]
     fpath = dirname + '/' + fname + '.xml'
-    print(fpath, 'for token', token)
     if os.path.isfile(fpath):
-        sys.exit('error: ' + fname + ' exists')
+        # XXX
+        #sys.exit('error: ' + fname + ' exists, ' + token)
+        print('error: ' + fname + ' exists, ' + token)
+        return
     with open(fpath, 'wb') as f:
         f.write('<?xml version="1.0" encoding="UTF-8" ?>\n'
                 + '<?xml-stylesheet href="../xsl/glosariusz.xsl" '
