@@ -29,8 +29,8 @@ def parse(filename):
     process_orphans(tokens, ranking)
     
     # Make fragments and write to files
-    fragment(ranking, element_list)
-    write_tokens(tokens.keys())
+    #fragment(ranking, element_list)
+    #write_tokens(tokens.keys())
 
 ############################################################
 
@@ -239,7 +239,7 @@ def prefix(filename):
 def write_tokens(tokens):
     frag = ET.Element('tokens')
     for token in tokens:
-        child = ET.SubElement(frag, 'token')
+        child = ET.SubElement(frag, 'tk')
         child.text = token
         
     ET.ElementTree(frag).write(dirname + '/' + prefix(filename) + '.xml', \
@@ -253,15 +253,15 @@ def write_frag(frag, token):
     #prettystr = reparsed.toprettyxml(indent="    ")
 
     fname = md5.new(token.encode('utf8')).hexdigest()
-    fname = fname[21:]
-    fpath = dirname + '/' + fname + '.xml'
-    if os.path.isfile(fpath):
-        sys.exit('error:', fname, 'exists')
-    with open(fpath, 'wb') as f:
-        f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
-                + '.xsl" type="text/xsl"?>'.encode('utf8'))
-        ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
-    f.closed
+    #fname = fname[21:]
+    #fpath = dirname + '/' + fname + '.xml'
+    #if os.path.isfile(fpath):
+    #    sys.exit('error:', fname, 'exists')
+    #with open(fpath, 'wb') as f:
+    #    f.write('<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet href="../xsl/' + prefix(filename)
+    #            + '.xsl" type="text/xsl"?>'.encode('utf8'))
+    #    ET.ElementTree(frag).write(f, encoding = 'utf-8', xml_declaration = False)
+    #f.closed
     
     # Replace sys.stdout with a file object pointing to your object file:
     #if 0:
@@ -272,9 +272,9 @@ def write_frag(frag, token):
         
 ############################################################
 
-dirname = '../www/frags'
-if (not os.path.isdir(dirname)) or len(os.listdir(dirname)) != 0:
-    sys.exit(dirname, 'does not exist or is not empty')
+# dirname = '../www/frags'
+# if (not os.path.isdir(dirname)) or len(os.listdir(dirname)) != 0:
+#     sys.exit(dirname, 'does not exist or is not empty')
 filename = sys.argv[1]
 parse(filename)
 
