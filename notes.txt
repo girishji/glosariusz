@@ -9,6 +9,7 @@ dev_appserver.py app.yaml
 https://cloud.google.com/appengine/docs/standard/python/quickstart
 
 gcloud app deploy app.yaml --project finanse
+gcloud app browse --project finanse
 
 --
 

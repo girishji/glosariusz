@@ -17,14 +17,18 @@ body {
     line-height: 1.3rem;
 }
 
+
 .dropdown-menu {
     max-height: 20rem; /* height of dropdown */
     overflow-y: auto; /* makes it scrollable */
-    background-color: #f0f0f0;
+    /* z-index: 25000 !important; */
+    /* background-color: #f0f0f0; */
 }
 
+/*
 .dropdown-menu > a:focus,
 .dropdown-menu > a:hover {
     background-color: #ffffff;
     background-image: none;
 }
+*/

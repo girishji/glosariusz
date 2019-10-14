@@ -53,6 +53,8 @@ $(document).ready(function() {
     readList("frags/finanse.xml");
     readList("frags/bankowosc.xml");
 
+    //$('.dropdown-toggle').dropdown();
+    
     // The jQuery $.ajax() function is used to perform an asynchronous HTTP request.
     function readList(url, tlist) {
         $.ajax({

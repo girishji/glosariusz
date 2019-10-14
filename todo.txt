@@ -1,0 +1,8 @@
+- fix dropdown issue on safari and mobile (fix on safari, if mobile fails, then create a fast test environment)
+- fix css files by including specific things for mobile only (search books looks wonky on mobile)
+- remove 'async: false' from javascript file; it is depricated; make it async, but writing to set/dict is not threadsafe, so create a stack (array) with 3 xml files and pop an item everytime ajax call succeeds, and append to a set; when you need a list, just get it from a set; set will remove duplicates also 
+- modal for contact, and put the link on the bottom right (where your name is commented out)
+- replace & with something else, & causes search problems, becomes &amp;
+- remove md5 from token file, calculate md5 on client side
+- make a logo 'polish english dictionary of finance'
+- XSL file update

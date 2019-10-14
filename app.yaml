@@ -10,3 +10,9 @@ handlers:
 - url: /(.*)
   static_files: www/\1
   upload: www/(.*)
+
+skip_files:
+- \.gitignore
+- ^\.git/.*
+- resources
+- parser
