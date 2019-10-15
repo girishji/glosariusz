@@ -193,11 +193,17 @@ def add_missing_bookarks(tokens, root):
                     partition = text.rpartition(u'•')
 
                 if partition[1]:
-                    potential = partition[0].rstrip()
-                    potential = potential.replace(u'\n', u'')
-                    if potential not in tokens and u'•' in potential:
-                        # print('adding missing token:', potential)
-                        tokens[potential] = text
+                    candidate = partition[0].rstrip()
+                    candidate = candidate.replace(u'\n', u'')
+                    if u'•' in candidate and not candidate.startswith(u'•'):
+                        found = False
+                        for token in tokens:
+                            if starts_with(candidate, token) or starts_with(token, candidate):
+                                found = True
+                                break
+                        if not found:
+                                print('adding missing token:', candidate)
+                                tokens[candidate] = text
     return tokens
 
 

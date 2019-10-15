@@ -12,7 +12,7 @@ https://cloud.google.com/appengine/docs/standard/python/quickstart
 
 xslt:
 https://stackoverflow.com/questions/3625820/xslt-generating-html-img-tags-how-to-use-an-xml-node-value-as-an-src-attribut
-
+https://stackoverflow.com/questions/11968872/in-xslt-1-0-if-value-contains-number-inside-string-value
 --
 
 * run the script to remove <Sect> and <Div> elements, since they randomly divide the document; much easier to find all children

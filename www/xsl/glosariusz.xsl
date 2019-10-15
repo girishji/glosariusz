@@ -105,11 +105,15 @@
   <!-- ================================================== -->
 
   <xsl:template match="L">
-    <div class="mx-4">
-      <table class="table table-borderless">
-        <xsl:apply-templates select="Caption|LI"/>
-      </table>
-    </div>
+    <xsl:choose>
+      <!-- test whether a string contains a numeric value -->
+      <xsl:when test="LI/Lbl and (translate((LI/Lbl)[1], '1234567890', '') != (LI/Lbl)[1])">
+        <ol><xsl:apply-templates select="L|Caption|LI"/></ol>
+      </xsl:when>
+      <xsl:otherwise>
+        <ul><xsl:apply-templates select="L|Caption|LI"/></ul>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="Caption">
@@ -117,15 +121,21 @@
   </xsl:template>
 
   <xsl:template match="LI">
-    <tr><xsl:apply-templates select="LBody|Lbl"/></tr>
+    <xsl:choose>
+      <xsl:when test="LBody|Lbl">
+        <xsl:apply-templates select="LBody|Lbl"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <p><xsl:value-of select="."/></p>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="Lbl">
-    <th><xsl:value-of select="."/></th>
   </xsl:template>
 
   <xsl:template match="LBody">
-    <td><xsl:value-of select="."/></td>
+    <li><xsl:value-of select="."/></li>
   </xsl:template>
 
   <!-- ================================================== -->
