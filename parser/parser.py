@@ -222,7 +222,14 @@ def read_bookmarks(root):
         if prefix(filename) == 'bankowosc':
             partition = bm.partition(u'–')
             if partition[1]:
-                tokens = insert_token(tokens, partition[0].rstrip(), bm)
+                candidate = partition[0].rstrip()
+                if u'•' in candidate:
+                    tokens = insert_token(tokens, candidate, bm)
+                else:
+                    part = bm.rpartition(u'•')
+                    if part[1]:
+                        candidate = part[0] + u'•' + part[2].partition(u'–')[0]
+                        tokens = insert_token(tokens, candidate.rstrip(), bm)
             else:
                 # deal with 2 exceptions
                 partition = bm.partition('-')

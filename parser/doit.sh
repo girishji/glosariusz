@@ -6,8 +6,8 @@ set -e
 
 function main {
 
-    python ./parser.py ../resources/xml/Finanse.xml
     python ./parser.py ../resources/xml/Bankowosc.xml
+    python ./parser.py ../resources/xml/Finanse.xml
     python ./parser.py ../resources/xml/Rachunkowosc.xml 
 
     # prepare dest dir
