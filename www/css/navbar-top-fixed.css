@@ -1,28 +1,40 @@
 /* Show it is fixed to the top */
 body {
-    /*min-height: 75rem;*/
+    min-height: 75rem;
     padding-top: 4.5rem;
 }
 
-/* girish */
+/* me */
+
+
+/*
+
+
 .dropdown {
     margin: 0px;
 }
+
+*/
 
 .navbar {
     padding: 0.3rem 1rem;
 }
 
 .navbar-brand {
-    line-height: 1.3rem;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 
 .dropdown-menu {
     max-height: 20rem; /* height of dropdown */
     overflow-y: auto; /* makes it scrollable */
-    /* z-index: 25000 !important; */
+    /*z-index: 25000 !important; */
     /* background-color: #f0f0f0; */
+}
+
+.dropdown-item {
+    padding: 0.25rem 1.25rem;
 }
 
 /*

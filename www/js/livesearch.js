@@ -12,8 +12,7 @@
 // https://stackoverflow.com/questions/19220873/how-to-read-xml-file-contents-in-jquery-and-display-in-html-elements
 // https://www.sitepoint.com/use-jquerys-ajax-function/
 
-var dictMap = new Map();
-var list = [];
+var tokens = new Set();
 
 let searchBox = document.getElementById("mySearch");
 let dropdownMenu = document.getElementById("myDropdownMenu");
@@ -40,10 +39,11 @@ $('#myDropdownMenu').on('click', '.dropdown-item', function() {
 
     let key = $(this).html();
     //console.log(key);
-    if (dictMap.has(key)) {
-        url = 'frags/' + dictMap.get(key) + '.xml';
+    if (tokens.has(key)) {
+        digest = hex_md5(key);
+        //url = 'frags/' + dictMap.get(key) + '.xml';
+        url = 'frags/' + digest.substring(21) + '.xml';
         addContent(url);
-        //console.log('file: ' + dictMap.get(key) + '.xml');
     }
     $('.dropdown-toggle').dropdown('toggle');
 })
@@ -53,19 +53,17 @@ $(document).ready(function() {
     readList("frags/finanse.xml");
     readList("frags/bankowosc.xml");
 
-    //$('.dropdown-toggle').dropdown();
-    
     // The jQuery $.ajax() function is used to perform an asynchronous HTTP request.
     function readList(url, tlist) {
         $.ajax({
             type: "GET",
             url: url,
-            async: false,
             dataType: "xml",
             success: function(xml) {
                 $(xml).find('tk').each(function(){
-                    dictMap.set($(this).text(), $(this).attr('fn'));
-                    //console.log($(this).text());
+                    //dictMap.set($(this).text(), $(this).attr('fn'));
+                    tokens.add($(this).text());
+                    //console.log($(this).text())
                 });
             }
         });
@@ -73,19 +71,15 @@ $(document).ready(function() {
 });
 
 
-// jquery calls window.load after document.ready
-$(window).on('load', function() {
-    // page is fully loaded, including all frames, objects and images
-    //alert("window is loaded");
-
-    list = Array.from(dictMap.keys());
-    //console.log(list.length);
-
-});
+// resize iframe according to height of rendered html
+function resizeIframe(obj) {
+    var iframeDocument = obj.contentDocument || obj.contentWindow.document;
+    // https://stackoverflow.com/questions/926916/how-to-get-the-bodys-content-of-an-iframe-in-javascript/11107977
+    obj.style.height = iframeDocument.body.scrollHeight + 'px';
+}
 
 function addContent(url) {
-    content.innerHTML = '<iframe class="embed-responsive-item" src="' + url + '"></iframe>';
-
+    $("#myIframe").attr("src", url);
 }
 
 
@@ -109,6 +103,7 @@ function generateDropdown() {
     }
     dropdownMenu.innerHTML = '';
     dropdownMenu.appendChild(frag);
+
     if (filteredList.length === 0) {
         // hide the dropdown, otherwise it shows up as empty box
         if (! $('#myDropdown').find('.dropdown-menu').is(":hidden")){
@@ -130,6 +125,10 @@ function getFilteredItems() {
     var itemText;
     var index;
     var rank = [];
+
+    list = Array.from(tokens.keys());
+    list.sort();
+
     for (let i = 0, length = list.length; i < length; i++) {
         itemText = list[i].toLowerCase();
         index = itemText.indexOf(searchTerm);

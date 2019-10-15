@@ -17,10 +17,13 @@
   
   <body>    
 
+    <!-- 1 rem = 16px in bootstrap -->
+    
     <!-- glosariusz-pojec-z-dziedziny-rachunkowosci-finansow-bankowosci -->
     
     <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #2366a2;"> --> <!-- dfe0ff -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">  <!-- dfe0ff -->
+    <!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">  --> 
+      <!--
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,21 +37,57 @@
           </form>
         </div>
       </div>
+
+          <a class="navbar-brand" href="#">
+            <span style="font-family: 'Amaranth', sans-serif;">
+              <small><b>Polish English</b><br>Dictionary of Finance</small>
+            </span>
+          </a>
+
+      -->
+      <!-- (add up to 12, xs is phone, sm is tablet, col-x extra small) 
+           https://www.w3schools.com/bootstrap/bootstrap_grid_examples.asp -->
+      <!-- https://getbootstrap.com/docs/4.1/layout/grid/ -->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top justify-content-between">
+
+      <div class="dropdown" id="myDropdown">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2 dropdown-toggle" id="mySearch" type="text" placeholder="Search" aria-label="Search"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown-menu shadow" id="myDropdownMenu">
+          </div>
+        </form>
+      </div>
+      
       <a class="navbar-brand" href="#">
-         <span style="font-family: 'Amaranth', sans-serif;">
-          <small><b>Polish English</b><br>Finance Glossary</small>
+        <span style="font-family: 'Amaranth', sans-serif;">
+          <span style="font-size: 0.8rem; line-height: 1;">
+            <table>
+              <tbody>
+                <tr>
+                  <td><b>Polish • English</b></td>
+                </tr>
+                <tr>
+                  <td>Glossary of Finance</td>
+                </tr>
+              </tbody>
+            </table>
+          </span>                  
         </span>
       </a>
+
     </nav>
 
     <main role="main" class="container">
       <div class="card">
         <div class="card-body">
-          <div class="embed-responsive embed-responsive-16by9" id="myContent">
-          </div>
+          <iframe id="myIframe" style="overflow:hidden; width:100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
           <footer class="blockquote-footer">
-            <cite title="Source Title">Source: SPPW Glosariusz </cite>
-            <!-- <a class="float-right text-muted font-italic" href="#">Girish</a></footer> -->
+            <cite title="Source Title">Źródło: SPPW Glosariusz Rachunkowości, Finansów i Bankowości</cite>
+            <a class="float-right text-muted font-italic" href="#">Contact</a>
+          </footer>
+
         </div>
       </div>
     </main>
@@ -59,6 +98,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/md5.js"></script>
     <script src="js/livesearch.js"></script>
    </body>
 

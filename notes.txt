@@ -1,15 +1,12 @@
-
---
-
 GAE
 
 to run webserver:
 dev_appserver.py app.yaml
 
-https://cloud.google.com/appengine/docs/standard/python/quickstart
-
 gcloud app deploy app.yaml --project finanse
 gcloud app browse --project finanse
+
+https://cloud.google.com/appengine/docs/standard/python/quickstart
 
 --
 
@@ -21,7 +18,13 @@ gcloud app browse --project finanse
 * Note the above if you want to repeat the process for xml files with jpeg and png links
 
 --
-
+setting width
+https://stackoverflow.com/questions/6593425/cross-browser-method-to-fit-a-child-div-to-its-parents-width
+container (css display) means children behave as they are contained in parent of this div
+https://www.w3schools.com/cssref/pr_class_display.asp
+cannot overflow iframe
+https://stackoverflow.com/questions/3477848/iframes-overflow-problem
+--
 use these tips to install lxml
 https://stackoverflow.com/questions/27008222/importerror-no-module-named-lxml-even-though-lxml-is-installed
 

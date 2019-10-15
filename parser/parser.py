@@ -245,7 +245,8 @@ def prefix(filename):
 def write_tokens(tokens):
     frag = ET.Element('tokens')
     for token in tokens:
-        child = ET.SubElement(frag, 'tk', fn=get_filename(token))
+        child = ET.SubElement(frag, 'tk')
+        # child = ET.SubElement(frag, 'tk', fn=get_filename(token))
         # after computing md5 sum remove
         child.text = clean_token(token)
         
