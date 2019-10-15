@@ -19,6 +19,7 @@ def parse(filename):
 
     # get a dictionary of token -> bookmark element
     tokens = read_bookmarks(root)
+    tokens = add_missing_bookarks(tokens, root)
     write_tokens(tokens.keys())
 
     # rank tokens based on position in document
@@ -174,6 +175,31 @@ def get_part(root):
     if len(parts) != 3:
         sys.exit('Part not found')
     return parts[2]
+
+############################################################
+
+def add_missing_bookarks(tokens, root):
+    elements = get_part(root)
+    headers = set(['P', 'H3', 'H4'])
+    for i, child in enumerate(elements):
+        if child.tag in headers:
+            if (child.find('./Link') is not None):
+                text = ''.join(child.itertext())
+
+                if prefix(filename) == 'bankowosc':
+                    partition = text.partition(u'–')
+                else:                    
+                    # rachunkowosc and finanse
+                    partition = text.rpartition(u'•')
+
+                if partition[1]:
+                    potential = partition[0].rstrip()
+                    potential = potential.replace(u'\n', u'')
+                    if potential not in tokens and u'•' in potential:
+                        # print('adding missing token:', potential)
+                        tokens[potential] = text
+    return tokens
+
 
 ############################################################
 

@@ -43,7 +43,7 @@
   <!-- ================================================== -->
   
   <xsl:template match="Table">
-          
+
     <div class="mx-4 py-4">
       <table class="table table-bordered">
 
@@ -70,10 +70,6 @@
     <xsl:choose>
       <xsl:when test="TD"> 
         <tr><xsl:apply-templates select="TH|TD"/></tr>
-        <xsl:message terminate="no">
-        TDs present
-            </xsl:message>
-
       </xsl:when>
 
       <xsl:otherwise>
@@ -86,7 +82,7 @@
           </xsl:when>
 
           <xsl:otherwise>
-            <tr><xsl:apply-templates select="TH"/></tr>
+            <tr class="table-active"><xsl:apply-templates select="TH"/></tr>
           </xsl:otherwise>
         </xsl:choose>
             
@@ -103,11 +99,24 @@
   </xsl:template>
 
   <xsl:template name="THSpanColumns">
-    <th colspan="99"><xsl:value-of select="(TH)[1]"/></th>
+    <th colspan="99"><xsl:value-of select="."/></th>
   </xsl:template>
 
   <!-- ================================================== -->
-  
+
+
+
+
+  <!-- ================================================== -->
+
+  <xsl:template match="H1|H2|H3|H4|H5">
+    <p><strong><xsl:apply-templates/></strong></p>
+  </xsl:template>
+
+  <xsl:template match="H6">
+    <p><small><xsl:apply-templates/></small></p>
+  </xsl:template>
+
   <xsl:template match="P">
     <p><xsl:apply-templates/></p>
   </xsl:template>
