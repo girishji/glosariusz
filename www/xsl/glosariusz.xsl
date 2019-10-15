@@ -104,8 +104,29 @@
 
   <!-- ================================================== -->
 
+  <xsl:template match="L">
+    <div class="mx-4">
+      <table class="table table-borderless">
+        <xsl:apply-templates select="Caption|LI"/>
+      </table>
+    </div>
+  </xsl:template>
 
+  <xsl:template match="Caption">
+    <p><small><xsl:value-of select="."/></small></p>
+  </xsl:template>
 
+  <xsl:template match="LI">
+    <tr><xsl:apply-templates select="LBody|Lbl"/></tr>
+  </xsl:template>
+
+  <xsl:template match="Lbl">
+    <th><xsl:value-of select="."/></th>
+  </xsl:template>
+
+  <xsl:template match="LBody">
+    <td><xsl:value-of select="."/></td>
+  </xsl:template>
 
   <!-- ================================================== -->
 
