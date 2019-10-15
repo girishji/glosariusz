@@ -19,26 +19,103 @@
   </xsl:template>
 
   <xsl:template match="Main">
-    <p>
-      <xsl:apply-templates/>
-    </p>
+    <p><xsl:apply-templates/></p>
   </xsl:template>
 
   <xsl:template match="Token">
-    <span class="h5"> <xsl:apply-templates/> </span>
+    <span class="h5"><xsl:apply-templates/> </span>
   </xsl:template>
 
   <xsl:template match="Description">
     <span> <xsl:apply-templates/> </span>
   </xsl:template>
-    
-  <xsl:template match="content">
-    <p align="center"> <xsl:apply-templates/> </p>
+
+  <!-- ================================================== -->
+  
+  <xsl:template match="Figure">
+    <small><xsl:apply-templates/></small>
   </xsl:template>
 
-  <xsl:template match="comment">
-    <hr/> <i><xsl:apply-templates/> </i>
+  <xsl:template match="ImageData">
+    <div><img class="p-4 img-fluid" src="{@src}"/></div>
   </xsl:template>
+
+  <!-- ================================================== -->
+  
+  <xsl:template match="Table">
+          
+    <div class="mx-4 py-4">
+      <table class="table table-bordered">
+
+        <xsl:if test="Caption"> <!-- at least one caption exists -->
+          <caption><xsl:value-of select="Caption"/></caption>
+        </xsl:if>
+
+        <xsl:choose>
+          <xsl:when test="(count(TR) = 2) and (count(TR/TH) = 2)">
+            <tr class="table-active"><th scope="col"><xsl:value-of select="(TR/TH)[1]"/></th></tr>
+            <tr><td><xsl:value-of select="(TR/TH)[2]"/></td></tr>
+          </xsl:when>
+
+          <xsl:otherwise>
+            <xsl:apply-templates select="TR"/>
+          </xsl:otherwise>
+        </xsl:choose>
+
+      </table>
+    </div>
+  </xsl:template>
+
+  <xsl:template match="TR">
+    <xsl:choose>
+      <xsl:when test="TD"> 
+        <tr><xsl:apply-templates select="TH|TD"/></tr>
+        <xsl:message terminate="no">
+        TDs present
+            </xsl:message>
+
+      </xsl:when>
+
+      <xsl:otherwise>
+
+        <xsl:choose>
+          <xsl:when test="(count(TH) = 1)">
+            <tr class="table-active">
+              <xsl:call-template name="THSpanColumns"/>
+            </tr>
+          </xsl:when>
+
+          <xsl:otherwise>
+            <tr><xsl:apply-templates select="TH"/></tr>
+          </xsl:otherwise>
+        </xsl:choose>
+            
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="TH">
+    <th><xsl:value-of select="."/></th>
+  </xsl:template>
+
+  <xsl:template match="TD">
+    <td><xsl:value-of select="."/></td>
+  </xsl:template>
+
+  <xsl:template name="THSpanColumns">
+    <th colspan="99"><xsl:value-of select="(TH)[1]"/></th>
+  </xsl:template>
+
+  <!-- ================================================== -->
+  
+  <xsl:template match="P">
+    <p><xsl:apply-templates/></p>
+  </xsl:template>
+
+  <xsl:template match="Link">
+    <i><xsl:apply-templates/></i>
+  </xsl:template>
+
 </xsl:stylesheet>
 
 
