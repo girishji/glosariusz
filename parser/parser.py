@@ -69,10 +69,15 @@ def fragment(ranking, elements):
                     sys.exit('error: ' + token + ' not found')
 
         frag = init_frag(token, text)
+        skip_next = False
         for index in range(begin + 1, end):
             if prefix() == 'bankowosc':
+                if skip_next:
+                    skip_next = False
+                    continue
                 if index < (end - 1) and \
                    is_element_a_linenumber(elements[index], elements[index + 1]):
+                    skip_next = True
                     continue
             else:
                 if is_element_a_linenumber(elements[index]):
