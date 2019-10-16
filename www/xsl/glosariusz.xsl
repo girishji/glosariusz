@@ -37,14 +37,14 @@
   </xsl:template>
 
   <xsl:template match="ImageData">
-    <div><img class="p-4 img-fluid" src="../{@src}"/></div>
+    <div><img class="p-3 img-fluid" src="../{@src}"/></div>
   </xsl:template>
 
   <!-- ================================================== -->
   
   <xsl:template match="Table">
 
-    <div class="mx-4 py-4">
+    <div class="py-4">
       <table class="table">
 
         <xsl:if test="Caption"> <!-- at least one caption exists -->
