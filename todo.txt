@@ -12,11 +12,11 @@ X- email
 - display hidden title
 - link in zrodlo
 - remove page num
-check large gap at bottom
-font compile
-remove css files
-- images dir
-- div after fig
+X check large gap at bottom
+X font compile
+X remove css files
+X - images dir
+X - div after fig
 X - font download, center 'dictionary...'
 X - primary color being dark
 

@@ -15,14 +15,11 @@ function main {
     if [ ! -d $dir ]; then
         mkdir -p $dir
     fi
-    
-    fcount=$(find $dir -maxdepth 1 -type f | wc -l)
-    if [ "$fcount" != "0" ]; then
-        echo "removing all files in $dir except images subdir" 
-        find $dir -maxdepth 1 -type f | while read x;do
-                                            rm -f $x
-                                        done
-    fi
+
+    # remove exisiting files
+    find $dir -type f | while read x;do
+                            rm -f $x
+                        done
 
     sdir="./frags"
     cp $sdir/bankowosc.xml $dir
@@ -47,10 +44,6 @@ function main {
                       done
     done
 
-    if [ ! -d "$dir/images" ]; then
-        cp -r ../resources/xml/images $dir
-    fi
-    
 }
 
 main

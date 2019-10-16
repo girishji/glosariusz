@@ -10,6 +10,15 @@ https://cloud.google.com/appengine/docs/standard/python/quickstart
 
 --
 
+to compile bootstrap:
+ - download source
+ - (we only compile scss files using sass command (do not run 'npm install bootrstap')
+ - run: sass scss/bootstrap.scss:css/bootstrap.css (see https://www.mugo.ca/Blog/How-to-customize-Bootstrap-4-using-Sass)
+ - copy the generated bootstrap.css
+ - to change variables, create a _custom_variables.scss and include it in bootstrap.scss,
+     see https://stackoverflow.com/questions/46505841/how-to-override-bootstrap-variables-in-sass
+ 
+--
 xslt:
 https://stackoverflow.com/questions/3625820/xslt-generating-html-img-tags-how-to-use-an-xml-node-value-as-an-src-attribut
 https://stackoverflow.com/questions/11968872/in-xslt-1-0-if-value-contains-number-inside-string-value

@@ -14,5 +14,6 @@ handlers:
 skip_files:
 - \.gitignore
 - ^\.git/.*
-- resources
 - parser
+- resources
+- bootstrap-4.3.1

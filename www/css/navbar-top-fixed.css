@@ -6,15 +6,10 @@ body {
 
 /* me */
 
-
 /*
-
-
 .dropdown {
     margin: 0px;
 }
-
-
 .navbar {
     padding: 0.3rem 1rem;
 }
@@ -24,7 +19,6 @@ body {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
 }
-
 
 .dropdown-menu {
     max-height: 20rem; /* height of dropdown */

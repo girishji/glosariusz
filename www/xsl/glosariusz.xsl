@@ -6,9 +6,8 @@
     <html>
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-        <!-- <link rel="stylesheet" href="../css/bootstrap-light1.min.css"/> -->
-        <link rel="stylesheet" href="../css/glosariusz.css"/> 
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/> -->
+        <link rel="stylesheet" href="../css/bootstrap.css"/>
         <title>
           <xsl:value-of select="Main/Token"/>
         </title>
@@ -34,11 +33,11 @@
   <!-- ================================================== -->
   
   <xsl:template match="Figure">
-    <small><xsl:apply-templates/></small>
+    <div class="mb-3"><small><xsl:apply-templates/></small></div>
   </xsl:template>
 
   <xsl:template match="ImageData">
-    <div><img class="p-4 img-fluid" src="{@src}"/></div>
+    <div><img class="p-4 img-fluid" src="../{@src}"/></div>
   </xsl:template>
 
   <!-- ================================================== -->
