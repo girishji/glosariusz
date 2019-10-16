@@ -44,6 +44,9 @@ function main {
                       done
     done
 
+    if [ ! -d "$dir/../images" ]; then
+        cp -r ../resources/xml/images $dir
+    fi
 }
 
 main

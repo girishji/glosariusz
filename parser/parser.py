@@ -61,8 +61,8 @@ def fragment(ranking, elements):
         if not starts_with(text, token):
             # concatenate next element and try again
             if begin < (end - 1) \
-               and (prefix(filename) == 'finanse' \
-                    or prefix(filename) == 'rachunkowosc'):
+               and (prefix() == 'finanse' \
+                    or prefix() == 'rachunkowosc'):
                 text = text + ''.join(elements[begin + 1].itertext())
                 begin = begin + 1
                 if not starts_with(text, token):
@@ -70,7 +70,15 @@ def fragment(ranking, elements):
 
         frag = init_frag(token, text)
         for index in range(begin + 1, end):
+            if prefix() == 'bankowosc':
+                if index < (end - 1) and \
+                   is_element_a_linenumber(elements[index], elements[index + 1]):
+                    continue
+            else:
+                if is_element_a_linenumber(elements[index]):
+                    continue
             frag.append(elements[index])
+            
         write_frag(frag, token)
 
 ############################################################
@@ -142,7 +150,7 @@ def rank_tokens(tokens, elements):
                         ranking[i] = token
 
     # Another attempt after concatenating next element
-    if prefix(filename) == 'finanse' or prefix(filename) == 'rachunkowosc':
+    if prefix() == 'finanse' or prefix() == 'rachunkowosc':
         found = set(ranking.values())
         for token in tokens:
             if not token in found:
@@ -186,7 +194,7 @@ def add_missing_bookarks(tokens, root):
             if (child.find('./Link') is not None):
                 text = ''.join(child.itertext())
 
-                if prefix(filename) == 'bankowosc':
+                if prefix() == 'bankowosc':
                     partition = text.partition(u'–')
                 else:                    
                     # rachunkowosc and finanse
@@ -219,7 +227,7 @@ def read_bookmarks(root):
     for item in bookmarks:
         bm = item.get('title')
 
-        if prefix(filename) == 'bankowosc':
+        if prefix() == 'bankowosc':
             partition = bm.partition(u'–')
             if partition[1]:
                 candidate = partition[0].rstrip()
@@ -270,7 +278,7 @@ def clean_str(s, insert=''):
 
 ############################################################
 
-def prefix(filename):
+def prefix():
     if 'Bankowosc' in filename:
         return 'bankowosc'
     if 'Finanse' in filename:
@@ -289,7 +297,7 @@ def write_tokens(tokens):
         # after computing md5 sum remove
         child.text = clean_token(token)
         
-    ET.ElementTree(frag).write(dbase + '/' + prefix(filename) + '.xml', \
+    ET.ElementTree(frag).write(dbase + '/' + prefix() + '.xml', \
                                encoding='utf-8', xml_declaration = True)
     
 ############################################################
@@ -331,7 +339,7 @@ def write_frag(frag, token):
 ############################################################
 
 def get_dirname(dname):
-    dirname = dname + '/' + prefix(filename)[:2]
+    dirname = dname + '/' + prefix()[:2]
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     else:
@@ -348,8 +356,42 @@ def get_dirname(dname):
 
 ############################################################
 
+def filter_line_numbers(filename):
+    
+    tree = ET.parse(filename)
+    root = tree.getroot()
+
+    elements = get_part(root)
+    for i, element in enumerate(elements):
+        if i < (len(elements) - 1):
+            if is_element_a_linenumber(element, elements[i + 1]):
+                print(element.text)
+                                        
+
+############################################################
+
+def is_element_a_linenumber(element, nextelem = None):
+    if element.tag == 'P' and element.get('id') is not None \
+       and element.get('id').startswith('LinkTarget') \
+       and len(element.findall('./*')) == 0:
+        if (prefix() == 'rachunkowosc'):
+            words = element.text.split()
+            if words and words[len(words) - 1].isdigit():
+                return True
+        elif (prefix() == 'finanse'):
+            if element.text.strip().isdigit():
+                return True
+        else: # bankowosc
+            if nextelem.tag == 'P' and nextelem.text.strip().isdigit():
+                return True
+            
+    return False
+    
+############################################################
+
 filename = sys.argv[1]
 print(filename)
 dbase = 'frags'
 dirname = get_dirname(dbase)
 parse(filename)
+#filter_line_numbers(filename)

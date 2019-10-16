@@ -8,10 +8,10 @@ X- XSL file update
 X - dropdown arrgin
 X- get rid of card
 X- email
-- minimize js and xslt
-- display hidden title
-- link in zrodlo
-- remove page num
+x- minimize js and xslt
+x- display hidden title
+x- link in zrodlo
+x - remove page num
 X check large gap at bottom
 X font compile
 X remove css files

@@ -10,6 +10,10 @@ https://cloud.google.com/appengine/docs/standard/python/quickstart
 
 --
 
+used https://obfuscator.io/ to obfuscate the javascript files
+
+--
+
 to compile bootstrap:
  - download source
  - (we only compile scss files using sass command (do not run 'npm install bootrstap')
