@@ -4,7 +4,19 @@ X - remove 'async: false' from javascript file; it is depricated; make it async,
 X - replace & with something else, & causes search problems, becomes &amp;
 X - remove md5 from token file, calculate md5 on client side
 X - make a logo 'polish english dictionary of finance'
-- XSL file update
+X- XSL file update
 X - dropdown arrgin
-- get rid of card
-- email
+X- get rid of card
+X- email
+- minimize js and xslt
+- display hidden title
+- link in zrodlo
+- remove page num
+check large gap at bottom
+font compile
+remove css files
+- images dir
+- div after fig
+X - font download, center 'dictionary...'
+X - primary color being dark
+
