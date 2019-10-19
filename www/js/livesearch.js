@@ -12,6 +12,8 @@
 // https://stackoverflow.com/questions/19220873/how-to-read-xml-file-contents-in-jquery-and-display-in-html-elements
 // https://www.sitepoint.com/use-jquerys-ajax-function/
 
+// XXX Note: only obfuscated file included in index.html, not this.
+
 var tokens = new Set();
 
 let searchBox = document.getElementById("mySearch");
@@ -23,14 +25,15 @@ var maxDisplayLimit = 100;
 
 // Capture the event when user types into the search box
 window.addEventListener('input', function () {
-    getFilteredItems();
+    getFilteredItems(searchBox.value);
 });
 
 // When you first click on input, it displays empty
-//  dropdown menu, hide this, by attaching a callback fn
+//  dropdown menu; display a default list by attaching a callback fn
 $('#myDropdown').on('shown.bs.dropdown', function () {
     if (filteredList.length === 0) {
-        $('.dropdown-toggle').dropdown('toggle');
+        // $('.dropdown-toggle').dropdown('toggle'); // hides dropdown
+        getFilteredItems(""); // show a list starting with 'a'
     }
 })
 
@@ -118,8 +121,8 @@ function generateDropdown() {
     }
 }
 
-function getFilteredItems() {
-    searchTerm = searchBox.value.toLowerCase();
+function getFilteredItems(searchString) {
+    searchTerm = searchString.toLowerCase();
     filteredList = [];
     var filteredCount = 0;
     var itemText;
